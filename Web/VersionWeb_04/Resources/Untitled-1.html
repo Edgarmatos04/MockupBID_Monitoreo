@@ -1,0 +1,3833 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Prisma4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Prisma4</title>
+
+    <link rel="shortcut icon" type="image/png" href="/Prisma4/Images/favicon.png" />
+
+    <link href="/Prisma4/Content/vendors/css?v=bwagyvZ0XYBpqJV7biw-hKRRu1s_Z2UG41xpdygd7R41" rel="stylesheet"/>
+
+    <link href="/Prisma4/Content/sisteplant/css?v=G2Zjk-xPCCajFIibt-dn43sKXyb-Jxtki01aaxlO2_A1" rel="stylesheet"/>
+
+    <link href="/Prisma4/Content/dashboard/css?v=h4-Ge93HXhbceZRO-pZsykUqxz-QXSpgye85QZRKhjY1" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="/Prisma4/ServerScripts/ServerParams"></script>
+    <script type="text/javascript">
+        window.applicationBaseUrl = "/Prisma4/";
+    </script>
+    <script src="/Prisma4/bundles/menu?v=I-roeKddZOTCQP5e6t5xTuSZF63_-SjsAdKWVPfR_IE1"></script>
+
+</head>
+<body>
+<script type="text/x-template" id="user-image-template">
+    <div>
+        <div v-if="hasImage" :class="imageContainerClass">
+            <img v-if="hasImage" :src="userImage" class="img-responsive img-border-round" />
+        </div>
+        <div v-else :class="avatarClass"></div>
+    </div>
+</script>
+    <div id="wrapper" class="layout">
+        <nav class="navbar-default navbar-static-side layout-menu" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <a href="/Prisma4/Home"></a>
+                    </li>
+
+                    <li class="nav-burguer menu-search">
+                        <i class="fa fa-search"></i>
+                        <input id="menuSearch" />
+                        <a class="navbar-minimalize minimalize-styl-2" href="javascript:void(0);">
+                            <div id="toggle">
+                                <div class="one"></div>
+                                <div class="two"></div>
+                                <div class="three"></div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <div class="sp-menu-container">
+
+
+<script type="text/javascript">
+                
+                    MenuSearch.addItem({
+                            text: 'Consulta de OSs Pendentes',
+                            program: 'LaborInProcess',
+                            url: '/Prisma4/Process/LaborInProcess?ClickButton=BLoad',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Execução / Consuta de OS',
+                            program: 'WorkOrderTel',
+                            url: '/Prisma4/Process/WorkOrderTel',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Resumo Impresso da OS',
+                            program: 'RWorkOrderSummary',
+                            url: '/Prisma4/Process/RWorkOrderSummary',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Alteração Massiva de Ordem de Serviço',
+                            program: 'WorkOrderListMassive',
+                            url: '/Prisma4/Process/WorkOrderListMassive',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'OS Completa - Projeto Instalação',
+                            program: 'WorkOrderPI',
+                            url: '/Prisma4/Process/WorkOrderPI',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Ativos',
+                            program: 'Asset',
+                            url: '/Prisma4/Process/Asset',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Características Técnicas por Sites (consulta / Modificação)',
+                            program: 'AssetTechChar',
+                            url: '/Prisma4/Process/AssetTechChar',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Características Técnicas dos Ativos (extração de dados)',
+                            program: 'AssetTechCharacteristic',
+                            url: '/Prisma4/Process/AssetTechCharacteristic',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Controle de Combustível',
+                            program: 'FuelConsumption2',
+                            url: '/Prisma4/Process/FuelConsumption2',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Controle de Gases Refrigerantes',
+                            program: 'RefrigerantGases2',
+                            url: '/Prisma4/Process/RefrigerantGases2',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Dashboard Capacity',
+                            program: 'DashboardCapacity',
+                            url: '/Prisma4/Process/DashboardCapacity',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Consulta de Defeitos em Ativos',
+                            program: 'QAssetDefect',
+                            url: '/Prisma4/Process/QAssetDefect',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Análise de Defeitos por Ativo',
+                            program: 'RAssetDefect',
+                            url: '/Prisma4/Process/RAssetDefect',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório de MTTR, MTBF e MKBF',
+                            program: 'RMTBF',
+                            url: '/Prisma4/Process/RMTBF',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Gráfico Evolução de Medidores',
+                            program: 'GMeasure',
+                            url: '/Prisma4/Process/GMeasure',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório de Furto e vandalismo',
+                            program: 'RFurtoVandalismo',
+                            url: '/Prisma4/Process/RFurtoVandalismo',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Consulta ao Calendário Previsto de um Ativo',
+                            program: 'AssetPlanUpdate',
+                            url: '/Prisma4/Process/AssetPlanUpdate',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Consulta ao Calendário Previsto de um Ativo/Roteiro',
+                            program: 'AssetWorkProcPlanUpdate',
+                            url: '/Prisma4/Process/AssetWorkProcPlanUpdate',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Cumprimento de um Planejamento',
+                            program: 'PlanningFulfillment',
+                            url: '/Prisma4/Process/PlanningFulfillment',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório de Cumprimento do Preventivo',
+                            program: 'RPlanningFulfillment',
+                            url: '/Prisma4/Process/RPlanningFulfillment',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Cumprimento de Preventivo de um Ativo',
+                            program: 'RAssetFulfillment',
+                            url: '/Prisma4/Process/RAssetFulfillment',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório do Calendário Previsto de Ativos / Roteiros',
+                            program: 'RAWPPlannedCalendarReport',
+                            url: '/Prisma4/Process/RAWPPlannedCalendarReport',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Plano de Manutenção',
+                            program: 'RManutPlan',
+                            url: '/Prisma4/Process/RManutPlan',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Plano de Manutenção por Mês',
+                            program: 'RManutPlanMonth',
+                            url: '/Prisma4/Process/RManutPlanMonth',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Análise de Mão-de-obra por Técnico',
+                            program: 'RLaborReporting',
+                            url: '/Prisma4/Process/RLaborReporting',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Análise Gráfica Ativos',
+                            program: 'GAssetReal',
+                            url: '/Prisma4/Process/GAssetReal',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Carga de Serviço por Ativo',
+                            program: 'RAssetWorkLoad',
+                            url: '/Prisma4/Process/RAssetWorkLoad',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Resumo Impresso da OS',
+                            program: 'RWorkOrderSummary',
+                            url: '/Prisma4/Process/RWorkOrderSummary',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório de Gastos por Ativo',
+                            program: 'RAssetReal',
+                            url: '/Prisma4/Process/RAssetReal',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatórios ABC',
+                            program: 'RABCReports',
+                            url: '/Prisma4/Process/RABCReports',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Análise Gráfica Ativos',
+                            program: 'GAssetReal',
+                            url: '/Prisma4/Process/GAssetReal',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Visual Reports',
+                            program: 'GVisualReport',
+                            url: '/Prisma4/Process/GVisualReport',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Gráfico de Gastos por Ativo e Classe',
+                            program: 'GAssetWorkTypeReal',
+                            url: '/Prisma4/Process/GAssetWorkTypeReal',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório de Gastos por Ativo e Classe',
+                            program: 'RAssetWorkTypeReal',
+                            url: '/Prisma4/Process/RAssetWorkTypeReal',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório Controle de Combustível / Refrigerante',
+                            program: 'RReportFuelControl',
+                            url: '/Prisma4/Process/RReportFuelControl',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Relatório Controle de Geradores',
+                            program: 'RGeneratorSiteType',
+                            url: '/Prisma4/Process/RGeneratorSiteType',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Manual Aceite',
+                            program: 'ManualAccept',
+                            url: '/Prisma4/Process/ManualAccept',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Manual FAQ',
+                            program: 'ManualFaq',
+                            url: '/Prisma4/Process/ManualFaq',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Manual Web',
+                            program: 'ManualWeb',
+                            url: '/Prisma4/Process/ManualWeb',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Manual APP/Mobile',
+                            program: 'ManualMobile',
+                            url: '/Prisma4/Process/ManualMobile',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'WFM - Atribuição de Eventos para os Técnicos',
+                            program: 'WorkOrderWFM',
+                            url: '/Prisma4/Process/WorkOrderWFM',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'WFM - Detalhamento de Tecnicos',
+                            program: 'WorkerWFM',
+                            url: '/Prisma4/Process/WorkerWFM',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Mapa de atuação WFM',
+                            program: 'MapWFM',
+                            url: '/Prisma4/Process/MapWFM',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Controle de Recusa',
+                            program: 'RejectControl',
+                            url: '/Prisma4/Process/RejectControl',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Aspectos e Impactos',
+                            program: 'SGADocumentAspectsImpacts',
+                            url: '/Prisma4/Process/SGADocumentAspectsImpacts',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'FISPQs',
+                            program: 'SGADocumentFISPQs',
+                            url: '/Prisma4/Process/SGADocumentFISPQs',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Normas',
+                            program: 'SGADocumentNorms',
+                            url: '/Prisma4/Process/SGADocumentNorms',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Políticas',
+                            program: 'SGADocumentPolicies',
+                            url: '/Prisma4/Process/SGADocumentPolicies',
+                            disabled: false
+                        });
+                
+                
+                    MenuSearch.addItem({
+                            text: 'Guia do Visitante',
+                            program: 'SGADocumentVisitorsGuide',
+                            url: '/Prisma4/Process/SGADocumentVisitorsGuide',
+                            disabled: false
+                        });
+                
+</script>
+
+    <li class="menu-item-first-level ">
+        <a href="javascript:void(0);" data-menu-first=M_0>
+            <i class="fa fa-sitemap" title="Ordem de Servi&#231;o"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Ordem de Servi&#231;o">Ordem de Servi&#231;o</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu-url="/Prisma4/Process/LaborInProcess?ClickButton=BLoad"
+            data-menu="M_0_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Consulta de OSs Pendentes"></i>
+                <span class="nav-label"
+                      title="Consulta de OSs Pendentes">
+                    Consulta de OSs Pendentes</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkOrderTel"
+            data-menu="M_0_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Execu&#231;&#227;o / Consuta de OS"></i>
+                <span class="nav-label"
+                      title="Execu&#231;&#227;o / Consuta de OS">
+                    Execu&#231;&#227;o / Consuta de OS</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RWorkOrderSummary"
+            data-menu="M_0_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Resumo Impresso da OS"></i>
+                <span class="nav-label"
+                      title="Resumo Impresso da OS">
+                    Resumo Impresso da OS</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkOrderListMassive"
+            data-menu="M_0_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Altera&#231;&#227;o Massiva de Ordem de Servi&#231;o"></i>
+                <span class="nav-label"
+                      title="Altera&#231;&#227;o Massiva de Ordem de Servi&#231;o">
+                    Altera&#231;&#227;o Massiva de Ordem de Servi&#231;o</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkOrderPI"
+            data-menu="M_0_P_4"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="OS Completa - Projeto Instala&#231;&#227;o"></i>
+                <span class="nav-label"
+                      title="OS Completa - Projeto Instala&#231;&#227;o">
+                    OS Completa - Projeto Instala&#231;&#227;o</span>
+            </a>
+        </li>
+            </ul>
+    </li>
+    <li class="menu-item-first-level">
+        <a href="javascript:void(0);" data-menu-first=M_1>
+            <i class="fa fa-sitemap" title="Consulta Sites"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Consulta Sites">Consulta Sites</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu-url="/Prisma4/Process/Asset"
+            data-menu="M_1_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Ativos"></i>
+                <span class="nav-label"
+                      title="Ativos">
+                    Ativos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/AssetTechChar"
+            data-menu="M_1_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Caracter&#237;sticas T&#233;cnicas por Sites (consulta / Modifica&#231;&#227;o)"></i>
+                <span class="nav-label"
+                      title="Caracter&#237;sticas T&#233;cnicas por Sites (consulta / Modifica&#231;&#227;o)">
+                    Caracter&#237;sticas T&#233;cnicas por Sites (consulta / Modifica&#231;&#227;o)</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/AssetTechCharacteristic"
+            data-menu="M_1_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Caracter&#237;sticas T&#233;cnicas dos Ativos (extra&#231;&#227;o de dados)"></i>
+                <span class="nav-label"
+                      title="Caracter&#237;sticas T&#233;cnicas dos Ativos (extra&#231;&#227;o de dados)">
+                    Caracter&#237;sticas T&#233;cnicas dos Ativos (extra&#231;&#227;o de dados)</span>
+            </a>
+        </li>
+            </ul>
+    </li>
+    <li class="menu-item-first-level">
+        <a href="javascript:void(0);" data-menu-first=M_2>
+            <i class="fa fa-sitemap" title="Consulta SGA"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Consulta SGA">Consulta SGA</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu-url="/Prisma4/Process/FuelConsumption2"
+            data-menu="M_2_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Controle de Combust&#237;vel"></i>
+                <span class="nav-label"
+                      title="Controle de Combust&#237;vel">
+                    Controle de Combust&#237;vel</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RefrigerantGases2"
+            data-menu="M_2_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Controle de Gases Refrigerantes"></i>
+                <span class="nav-label"
+                      title="Controle de Gases Refrigerantes">
+                    Controle de Gases Refrigerantes</span>
+            </a>
+        </li>
+            </ul>
+    </li>
+    <li class="menu-item-first-level">
+        <a href="javascript:void(0);" data-menu-first=M_3>
+            <i class="fa fa-sitemap" title="Relat&#243;rios"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Relat&#243;rios">Relat&#243;rios</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu="M_3_M_0"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rios de OS"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rios de OS">
+                    Relat&#243;rios de OS
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_1"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rios Preventivos"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rios Preventivos">
+                    Relat&#243;rios Preventivos
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_2"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio Operacional"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rio Operacional">
+                    Relat&#243;rio Operacional
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_3"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio Gerenciais"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rio Gerenciais">
+                    Relat&#243;rio Gerenciais
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_4"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rios SGA"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rios SGA">
+                    Relat&#243;rios SGA
+                </span>
+
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/DashboardCapacity"
+            data-menu="M_3_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Dashboard Capacity"></i>
+                <span class="nav-label"
+                      title="Dashboard Capacity">
+                    Dashboard Capacity</span>
+            </a>
+        </li>
+            </ul>
+    </li>
+    <li class="menu-item-first-level">
+        <a href="javascript:void(0);" data-menu-first=M_4>
+            <i class="fa fa-sitemap" title="Manual"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Manual">Manual</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu="M_4_M_0"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Manual"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Manual">
+                    Manual
+                </span>
+
+            </a>
+        </li>
+            </ul>
+    </li>
+    <li class="menu-item-first-level">
+        <a href="javascript:void(0);" data-menu-first=M_5>
+            <i class="fa fa-sitemap" title="Supervis&#227;o WFM"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Supervis&#227;o WFM">Supervis&#227;o WFM</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu-url="/Prisma4/Process/WorkOrderWFM"
+            data-menu="M_5_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="WFM - Atribui&#231;&#227;o de Eventos para os T&#233;cnicos"></i>
+                <span class="nav-label"
+                      title="WFM - Atribui&#231;&#227;o de Eventos para os T&#233;cnicos">
+                    WFM - Atribui&#231;&#227;o de Eventos para os T&#233;cnicos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkerWFM"
+            data-menu="M_5_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="WFM - Detalhamento de Tecnicos"></i>
+                <span class="nav-label"
+                      title="WFM - Detalhamento de Tecnicos">
+                    WFM - Detalhamento de Tecnicos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/MapWFM"
+            data-menu="M_5_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Mapa de atua&#231;&#227;o WFM"></i>
+                <span class="nav-label"
+                      title="Mapa de atua&#231;&#227;o WFM">
+                    Mapa de atua&#231;&#227;o WFM</span>
+            </a>
+        </li>
+            </ul>
+    </li>
+    <li class="menu-item-first-level">
+        <a href="javascript:void(0);" data-menu-first=M_6>
+            <i class="fa fa-sitemap" title="Controle de Recusa"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Controle de Recusa">Controle de Recusa</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu-url="/Prisma4/Process/RejectControl"
+            data-menu="M_6_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Controle de Recusa"></i>
+                <span class="nav-label"
+                      title="Controle de Recusa">
+                    Controle de Recusa</span>
+            </a>
+        </li>
+            </ul>
+    </li>
+    <li class="menu-item-first-level">
+        <a href="javascript:void(0);" data-menu-first=M_7>
+            <i class="fa fa-sitemap" title="Documentos SGA"></i>
+                <span class="fa arrow"></span>
+            <span class="nav-label" title="Documentos SGA">Documentos SGA</span>
+        </a>
+            <ul class="nav nav-second-level collapse">
+        <li data-menu-url="/Prisma4/Process/SGADocumentAspectsImpacts"
+            data-menu="M_7_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Aspectos e Impactos"></i>
+                <span class="nav-label"
+                      title="Aspectos e Impactos">
+                    Aspectos e Impactos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentFISPQs"
+            data-menu="M_7_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="FISPQs"></i>
+                <span class="nav-label"
+                      title="FISPQs">
+                    FISPQs</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentNorms"
+            data-menu="M_7_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Normas"></i>
+                <span class="nav-label"
+                      title="Normas">
+                    Normas</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentPolicies"
+            data-menu="M_7_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Pol&#237;ticas"></i>
+                <span class="nav-label"
+                      title="Pol&#237;ticas">
+                    Pol&#237;ticas</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentVisitorsGuide"
+            data-menu="M_7_P_4"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Guia do Visitante"></i>
+                <span class="nav-label"
+                      title="Guia do Visitante">
+                    Guia do Visitante</span>
+            </a>
+        </li>
+            </ul>
+    </li>
+
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_0"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Ordem de Servi&#231;o"
+            data-menu="M_0"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Ordem de Servi&#231;o
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/LaborInProcess?ClickButton=BLoad"
+            data-menu="M_0_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Consulta de OSs Pendentes"></i>
+                <span class="nav-label"
+                      title="Consulta de OSs Pendentes">
+                    Consulta de OSs Pendentes</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkOrderTel"
+            data-menu="M_0_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Execu&#231;&#227;o / Consuta de OS"></i>
+                <span class="nav-label"
+                      title="Execu&#231;&#227;o / Consuta de OS">
+                    Execu&#231;&#227;o / Consuta de OS</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RWorkOrderSummary"
+            data-menu="M_0_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Resumo Impresso da OS"></i>
+                <span class="nav-label"
+                      title="Resumo Impresso da OS">
+                    Resumo Impresso da OS</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkOrderListMassive"
+            data-menu="M_0_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Altera&#231;&#227;o Massiva de Ordem de Servi&#231;o"></i>
+                <span class="nav-label"
+                      title="Altera&#231;&#227;o Massiva de Ordem de Servi&#231;o">
+                    Altera&#231;&#227;o Massiva de Ordem de Servi&#231;o</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkOrderPI"
+            data-menu="M_0_P_4"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="OS Completa - Projeto Instala&#231;&#227;o"></i>
+                <span class="nav-label"
+                      title="OS Completa - Projeto Instala&#231;&#227;o">
+                    OS Completa - Projeto Instala&#231;&#227;o</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_1"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Consulta Sites"
+            data-menu="M_1"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Consulta Sites
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/Asset"
+            data-menu="M_1_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Ativos"></i>
+                <span class="nav-label"
+                      title="Ativos">
+                    Ativos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/AssetTechChar"
+            data-menu="M_1_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Caracter&#237;sticas T&#233;cnicas por Sites (consulta / Modifica&#231;&#227;o)"></i>
+                <span class="nav-label"
+                      title="Caracter&#237;sticas T&#233;cnicas por Sites (consulta / Modifica&#231;&#227;o)">
+                    Caracter&#237;sticas T&#233;cnicas por Sites (consulta / Modifica&#231;&#227;o)</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/AssetTechCharacteristic"
+            data-menu="M_1_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Caracter&#237;sticas T&#233;cnicas dos Ativos (extra&#231;&#227;o de dados)"></i>
+                <span class="nav-label"
+                      title="Caracter&#237;sticas T&#233;cnicas dos Ativos (extra&#231;&#227;o de dados)">
+                    Caracter&#237;sticas T&#233;cnicas dos Ativos (extra&#231;&#227;o de dados)</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_2"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Consulta SGA"
+            data-menu="M_2"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Consulta SGA
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/FuelConsumption2"
+            data-menu="M_2_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Controle de Combust&#237;vel"></i>
+                <span class="nav-label"
+                      title="Controle de Combust&#237;vel">
+                    Controle de Combust&#237;vel</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RefrigerantGases2"
+            data-menu="M_2_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Controle de Gases Refrigerantes"></i>
+                <span class="nav-label"
+                      title="Controle de Gases Refrigerantes">
+                    Controle de Gases Refrigerantes</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_3"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Relat&#243;rios"
+            data-menu="M_3"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Relat&#243;rios
+        </li>
+
+        <li data-menu="M_3_M_0"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rios de OS"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rios de OS">
+                    Relat&#243;rios de OS
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_1"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rios Preventivos"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rios Preventivos">
+                    Relat&#243;rios Preventivos
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_2"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio Operacional"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rio Operacional">
+                    Relat&#243;rio Operacional
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_3"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio Gerenciais"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rio Gerenciais">
+                    Relat&#243;rio Gerenciais
+                </span>
+
+            </a>
+        </li>
+        <li data-menu="M_3_M_4"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rios SGA"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Relat&#243;rios SGA">
+                    Relat&#243;rios SGA
+                </span>
+
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/DashboardCapacity"
+            data-menu="M_3_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Dashboard Capacity"></i>
+                <span class="nav-label"
+                      title="Dashboard Capacity">
+                    Dashboard Capacity</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level-1"
+        data-menu-panel="M_3_M_0"
+        data-menu-level="1">
+
+        <li class="sp-menu-title"
+            title="Relat&#243;rios de OS"
+            data-menu="M_3_M_0"
+            data-menu-level="2">
+            <i class="fa arrow"></i>
+            Relat&#243;rios de OS
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/QAssetDefect"
+            data-menu="M_3_M_0_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Consulta de Defeitos em Ativos"></i>
+                <span class="nav-label"
+                      title="Consulta de Defeitos em Ativos">
+                    Consulta de Defeitos em Ativos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RAssetDefect"
+            data-menu="M_3_M_0_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="An&#225;lise de Defeitos por Ativo"></i>
+                <span class="nav-label"
+                      title="An&#225;lise de Defeitos por Ativo">
+                    An&#225;lise de Defeitos por Ativo</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RMTBF"
+            data-menu="M_3_M_0_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio de MTTR, MTBF e MKBF"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio de MTTR, MTBF e MKBF">
+                    Relat&#243;rio de MTTR, MTBF e MKBF</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/GMeasure"
+            data-menu="M_3_M_0_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Gr&#225;fico Evolu&#231;&#227;o de Medidores"></i>
+                <span class="nav-label"
+                      title="Gr&#225;fico Evolu&#231;&#227;o de Medidores">
+                    Gr&#225;fico Evolu&#231;&#227;o de Medidores</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RFurtoVandalismo"
+            data-menu="M_3_M_0_P_4"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio de Furto e vandalismo"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio de Furto e vandalismo">
+                    Relat&#243;rio de Furto e vandalismo</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level-1"
+        data-menu-panel="M_3_M_1"
+        data-menu-level="1">
+
+        <li class="sp-menu-title"
+            title="Relat&#243;rios Preventivos"
+            data-menu="M_3_M_1"
+            data-menu-level="2">
+            <i class="fa arrow"></i>
+            Relat&#243;rios Preventivos
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/AssetPlanUpdate"
+            data-menu="M_3_M_1_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Consulta ao Calend&#225;rio Previsto de um Ativo"></i>
+                <span class="nav-label"
+                      title="Consulta ao Calend&#225;rio Previsto de um Ativo">
+                    Consulta ao Calend&#225;rio Previsto de um Ativo</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/AssetWorkProcPlanUpdate"
+            data-menu="M_3_M_1_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Consulta ao Calend&#225;rio Previsto de um Ativo/Roteiro"></i>
+                <span class="nav-label"
+                      title="Consulta ao Calend&#225;rio Previsto de um Ativo/Roteiro">
+                    Consulta ao Calend&#225;rio Previsto de um Ativo/Roteiro</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/PlanningFulfillment"
+            data-menu="M_3_M_1_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Cumprimento de um Planejamento"></i>
+                <span class="nav-label"
+                      title="Cumprimento de um Planejamento">
+                    Cumprimento de um Planejamento</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RPlanningFulfillment"
+            data-menu="M_3_M_1_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio de Cumprimento do Preventivo"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio de Cumprimento do Preventivo">
+                    Relat&#243;rio de Cumprimento do Preventivo</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RAssetFulfillment"
+            data-menu="M_3_M_1_P_4"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Cumprimento de Preventivo de um Ativo"></i>
+                <span class="nav-label"
+                      title="Cumprimento de Preventivo de um Ativo">
+                    Cumprimento de Preventivo de um Ativo</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RAWPPlannedCalendarReport"
+            data-menu="M_3_M_1_P_5"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio do Calend&#225;rio Previsto de Ativos / Roteiros"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio do Calend&#225;rio Previsto de Ativos / Roteiros">
+                    Relat&#243;rio do Calend&#225;rio Previsto de Ativos / Roteiros</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RManutPlan"
+            data-menu="M_3_M_1_P_6"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Plano de Manuten&#231;&#227;o"></i>
+                <span class="nav-label"
+                      title="Plano de Manuten&#231;&#227;o">
+                    Plano de Manuten&#231;&#227;o</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RManutPlanMonth"
+            data-menu="M_3_M_1_P_7"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Plano de Manuten&#231;&#227;o por M&#234;s"></i>
+                <span class="nav-label"
+                      title="Plano de Manuten&#231;&#227;o por M&#234;s">
+                    Plano de Manuten&#231;&#227;o por M&#234;s</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level-1"
+        data-menu-panel="M_3_M_2"
+        data-menu-level="1">
+
+        <li class="sp-menu-title"
+            title="Relat&#243;rio Operacional"
+            data-menu="M_3_M_2"
+            data-menu-level="2">
+            <i class="fa arrow"></i>
+            Relat&#243;rio Operacional
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/RLaborReporting"
+            data-menu="M_3_M_2_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="An&#225;lise de M&#227;o-de-obra por T&#233;cnico"></i>
+                <span class="nav-label"
+                      title="An&#225;lise de M&#227;o-de-obra por T&#233;cnico">
+                    An&#225;lise de M&#227;o-de-obra por T&#233;cnico</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/GAssetReal"
+            data-menu="M_3_M_2_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="An&#225;lise Gr&#225;fica Ativos"></i>
+                <span class="nav-label"
+                      title="An&#225;lise Gr&#225;fica Ativos">
+                    An&#225;lise Gr&#225;fica Ativos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RAssetWorkLoad"
+            data-menu="M_3_M_2_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Carga de Servi&#231;o por Ativo"></i>
+                <span class="nav-label"
+                      title="Carga de Servi&#231;o por Ativo">
+                    Carga de Servi&#231;o por Ativo</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RWorkOrderSummary"
+            data-menu="M_3_M_2_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Resumo Impresso da OS"></i>
+                <span class="nav-label"
+                      title="Resumo Impresso da OS">
+                    Resumo Impresso da OS</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level-1"
+        data-menu-panel="M_3_M_3"
+        data-menu-level="1">
+
+        <li class="sp-menu-title"
+            title="Relat&#243;rio Gerenciais"
+            data-menu="M_3_M_3"
+            data-menu-level="2">
+            <i class="fa arrow"></i>
+            Relat&#243;rio Gerenciais
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/RAssetReal"
+            data-menu="M_3_M_3_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio de Gastos por Ativo"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio de Gastos por Ativo">
+                    Relat&#243;rio de Gastos por Ativo</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RABCReports"
+            data-menu="M_3_M_3_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rios ABC"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rios ABC">
+                    Relat&#243;rios ABC</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/GAssetReal"
+            data-menu="M_3_M_3_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="An&#225;lise Gr&#225;fica Ativos"></i>
+                <span class="nav-label"
+                      title="An&#225;lise Gr&#225;fica Ativos">
+                    An&#225;lise Gr&#225;fica Ativos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/GVisualReport"
+            data-menu="M_3_M_3_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Visual Reports"></i>
+                <span class="nav-label"
+                      title="Visual Reports">
+                    Visual Reports</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/GAssetWorkTypeReal"
+            data-menu="M_3_M_3_P_4"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Gr&#225;fico de Gastos por Ativo e Classe"></i>
+                <span class="nav-label"
+                      title="Gr&#225;fico de Gastos por Ativo e Classe">
+                    Gr&#225;fico de Gastos por Ativo e Classe</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RAssetWorkTypeReal"
+            data-menu="M_3_M_3_P_5"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio de Gastos por Ativo e Classe"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio de Gastos por Ativo e Classe">
+                    Relat&#243;rio de Gastos por Ativo e Classe</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level-1"
+        data-menu-panel="M_3_M_4"
+        data-menu-level="1">
+
+        <li class="sp-menu-title"
+            title="Relat&#243;rios SGA"
+            data-menu="M_3_M_4"
+            data-menu-level="2">
+            <i class="fa arrow"></i>
+            Relat&#243;rios SGA
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/RReportFuelControl"
+            data-menu="M_3_M_4_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio Controle de Combust&#237;vel / Refrigerante"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio Controle de Combust&#237;vel / Refrigerante">
+                    Relat&#243;rio Controle de Combust&#237;vel / Refrigerante</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/RGeneratorSiteType"
+            data-menu="M_3_M_4_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Relat&#243;rio Controle de Geradores"></i>
+                <span class="nav-label"
+                      title="Relat&#243;rio Controle de Geradores">
+                    Relat&#243;rio Controle de Geradores</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_4"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Manual"
+            data-menu="M_4"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Manual
+        </li>
+
+        <li data-menu="M_4_M_0"
+            data-menu-level="2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Manual"></i>
+                <span class="fa arrow"></span>
+                <span class="nav-label" title="Manual">
+                    Manual
+                </span>
+
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level-1"
+        data-menu-panel="M_4_M_0"
+        data-menu-level="1">
+
+        <li class="sp-menu-title"
+            title="Manual"
+            data-menu="M_4_M_0"
+            data-menu-level="2">
+            <i class="fa arrow"></i>
+            Manual
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/ManualAccept"
+            data-menu="M_4_M_0_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Manual Aceite"></i>
+                <span class="nav-label"
+                      title="Manual Aceite">
+                    Manual Aceite</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/ManualFaq"
+            data-menu="M_4_M_0_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Manual FAQ"></i>
+                <span class="nav-label"
+                      title="Manual FAQ">
+                    Manual FAQ</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/ManualWeb"
+            data-menu="M_4_M_0_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Manual Web"></i>
+                <span class="nav-label"
+                      title="Manual Web">
+                    Manual Web</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/ManualMobile"
+            data-menu="M_4_M_0_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Manual APP/Mobile"></i>
+                <span class="nav-label"
+                      title="Manual APP/Mobile">
+                    Manual APP/Mobile</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_5"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Supervis&#227;o WFM"
+            data-menu="M_5"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Supervis&#227;o WFM
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/WorkOrderWFM"
+            data-menu="M_5_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="WFM - Atribui&#231;&#227;o de Eventos para os T&#233;cnicos"></i>
+                <span class="nav-label"
+                      title="WFM - Atribui&#231;&#227;o de Eventos para os T&#233;cnicos">
+                    WFM - Atribui&#231;&#227;o de Eventos para os T&#233;cnicos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/WorkerWFM"
+            data-menu="M_5_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="WFM - Detalhamento de Tecnicos"></i>
+                <span class="nav-label"
+                      title="WFM - Detalhamento de Tecnicos">
+                    WFM - Detalhamento de Tecnicos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/MapWFM"
+            data-menu="M_5_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Mapa de atua&#231;&#227;o WFM"></i>
+                <span class="nav-label"
+                      title="Mapa de atua&#231;&#227;o WFM">
+                    Mapa de atua&#231;&#227;o WFM</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_6"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Controle de Recusa"
+            data-menu="M_6"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Controle de Recusa
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/RejectControl"
+            data-menu="M_6_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Controle de Recusa"></i>
+                <span class="nav-label"
+                      title="Controle de Recusa">
+                    Controle de Recusa</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="sp-menu sp-menu-level--1"
+        data-menu-panel="M_7"
+        data-menu-level="-1">
+
+        <li class="sp-menu-title"
+            title="Documentos SGA"
+            data-menu="M_7"
+            data-menu-level="0">
+            <i class="fa arrow"></i>
+            Documentos SGA
+        </li>
+
+        <li data-menu-url="/Prisma4/Process/SGADocumentAspectsImpacts"
+            data-menu="M_7_P_0"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Aspectos e Impactos"></i>
+                <span class="nav-label"
+                      title="Aspectos e Impactos">
+                    Aspectos e Impactos</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentFISPQs"
+            data-menu="M_7_P_1"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="FISPQs"></i>
+                <span class="nav-label"
+                      title="FISPQs">
+                    FISPQs</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentNorms"
+            data-menu="M_7_P_2"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Normas"></i>
+                <span class="nav-label"
+                      title="Normas">
+                    Normas</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentPolicies"
+            data-menu="M_7_P_3"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Pol&#237;ticas"></i>
+                <span class="nav-label"
+                      title="Pol&#237;ticas">
+                    Pol&#237;ticas</span>
+            </a>
+        </li>
+        <li data-menu-url="/Prisma4/Process/SGADocumentVisitorsGuide"
+            data-menu="M_7_P_4"
+            class="">
+            <a>
+                <i class="fa fa-sitemap" title="Guia do Visitante"></i>
+                <span class="nav-label"
+                      title="Guia do Visitante">
+                    Guia do Visitante</span>
+            </a>
+        </li>
+    </ul>
+
+
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="layout-page">
+            <div class="row navbar-row layout-header">
+                <nav class="navbar navbar-static-top navbar-user" role="navigation" id="navbarTop">
+                    <div class="navbar-user-name navbar-left">
+                        <div class="navbar-user-name-container">
+                            <span class="user-company">TELEFONICA TECNICA FLM - PRODU&#199;&#195;O</span>
+                        </div>
+                    </div>
+
+                    <div class="navbar-right navbar-rightest-panel" id="navbar-menu">
+                        <ul class="nav nav-pills">
+                            <admin-menu v-if="isAdmin"
+                                        v-on:cancel-sudo="cancelSudo">
+                            </admin-menu>
+                            <browser-menu></browser-menu>
+                            <notifications-menu></notifications-menu>
+                            <user-menu :density="density"
+                                       user-name="3548302"
+                                       company="TELEFONICA TECNICA FLM - PRODU&#199;&#195;O"
+                                       can-change-password="can-change-password"
+                                       v-on:update="updateDensity"
+                                       v-on:password="changePassword"
+                                       v-on:logout="logout">
+                            </user-menu>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="wrapper wrapper-content layout-content">
+            </div>
+        </div>
+    </div>
+
+<div v-cloak id="dialog-wrapper" class="backdrop force-close-element"
+     v-bind:class="{'backdrop--hidden': hideBackdrop}">
+    <transition-group name="fade" tag="div">
+        <div v-for="(dialog, index) in dialogs"
+             :key="dialog.message">
+            <sp-dialog-header v-if="dialogShowHeader(dialog)"
+                              :dialog="dialog"
+                              :title="getDialogTitle(dialog)"
+                              :order="dialogs.length - index - 1"
+                              :isMaximized="getDialogIsMaximized(dialog)"
+                              v-on:close="closeCurrentDialog">
+                <component slot="dialogContent"
+                           v-bind:is="dialog.customModal.componentName"
+                           v-bind:props="dialog.customModal.props">
+                </component>
+            </sp-dialog-header>
+            <sp-dialog v-else
+                       v-bind:dialog="dialog"
+                       v-bind:order="dialogs.length - index - 1"
+                       v-on:close="closeDialog">
+            </sp-dialog>
+        </div>
+    </transition-group>
+</div>
+
+<script type="text/x-template" id="sp-dialog-header-template">
+    <div :class="classesCustomModal"
+         :data-order="order">
+        <div class="customModal__header">
+            <span class="customModal__title">{{title}}</span>
+            <sp-toggle-maximizer class-prefix="customModal" v-on:click="toggleMaximizedState" :is-maximized="isMaximized"></sp-toggle-maximizer>
+
+            <button type="button"
+                    class="customModal__close"
+                    v-on:click.stop.prevent="close" title="Fechar">
+                <i class="fa fa-close fa-lg"></i>
+            </button>
+        </div>
+        <slot name="dialogContent"></slot>
+    </div>
+</script>
+<script type="text/x-template" id="dialog-template">
+    <div class="dialog"
+         v-bind:class="typeClass"
+         :data-order="order">
+        <div class="dialog-caption">
+            <div class="dialog-caption-img"></div>
+        </div>
+        <div class="dialog-content">
+            <div class="dialog-title text-center">{{ title }}</div>
+            <div class="dialog-msg text-center">{{ dialog.message }}</div>
+            <div class="dialog-input text-center" v-if="hasInput">
+                <input v-bind:type="inputType" v-model="dialog.inputValue" v-if="!showInputAsTextArea" v-focus />
+                <textarea v-model="dialog.inputValue" v-if="showInputAsTextArea" v-focus />
+            </div>
+            <div class="dialog-button-container text-center">
+                <button v-for="button in dialog.buttons"
+                        class="dialog-button"
+                        v-bind:class="getButtonClass(button)"
+                        v-on:click="onDialogButtonClick(button)"
+                        v-focus="shouldBeFocused(button)">
+                    {{ getButtonText(button) }}
+                </button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="UrlLoaderTemplate">
+    <div class="customModal__content customModal__content--no-footer"></div>
+</script>
+<script type="text/x-template" id="sp-toggle-maximizer-template">
+    <div :class="classToggleMaximizer"
+         :title="tooltipToggleMaximizer"
+         v-on:click.stop.prevent="click">
+        <i :class="classesIconToggleMaximizer"></i>
+    </div>
+</script>
+<div v-cloak id="credentials-dialog-wrapper" class="backdrop" v-bind:class="{'backdrop--hidden': hideBackdrop}">
+    <transition-group name="fade" tag="div">
+
+        <div class="dialog credentials"
+                v-for="(dialog, index) in dialogs"
+                v-bind:data-order="dialogs.length - index - 1"
+                key="index">     
+
+            <div class="dialog-caption">
+                <div class="container-login-panel-logo"></div>
+            </div>
+            <div class="login-error-container" v-if="dialog.message != null">
+                <div class="login-error">{{ dialog.message }}</div>
+            </div>
+
+            <div class="dialog-content credentials">
+                <input name="user" v-model="dialog.user" type="text" class="dialog-credentials-input"
+                       v-if="userVisible"
+                       v-bind:placeholder="dialog.placeHolders.user"
+                       :disabled="userDisabled" :autofocus="focusOnUser" />
+                <div class="group-eye">
+                    <input id="password" name="password" v-model="dialog.password" type="password" class="dialog-credentials-input"
+                           v-bind:placeholder="dialog.placeHolders.password"
+                           :autofocus="focusOnPassword" />
+                    <div id="addEye-password" class="button-eye-login">
+                        <i class="fa fa-eye-slash" id="eyeButton-password" v-on:click="passwordToText(true)"></i>
+                    </div>
+                </div>
+                <div class="group-eye" v-if="confirmPasswordVisible">
+                    <input id="confirmPassword" v-model="dialog.confirmPassword" type="password" class="dialog-credentials-input"
+                           v-bind:placeholder="dialog.placeHolders.confirmPassword" />
+                    <div id="addEye-confirmPassword" class="button-eye-login">
+                        <i class="fa fa-eye-slash" id="eyeButton-confirmPassword" v-on:click="passwordToText(false)"></i>
+                    </div>
+                </div>
+                <div class="dialog-button-container credentials text-center">
+                    <button v-for="button in dialog.buttons"
+                            class="dialog-button"
+                            v-bind:class="dialog.buttonSize"
+                            v-on:click="onDialogButtonClick(dialog, button.returnValue)">
+                        {{ translate(button.resourceKey) }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </transition-group>
+</div>
+
+
+
+<script type="text/x-template" id="textDialog">
+    <div>
+        <div class="customModal__content">
+            <div class="dialog-content-text">
+                <textarea name="text" v-on:keydown.enter="onEnter" v-model="properties.text" class="textDialog-textarea" v-bind:readonly="properties.readOnly" v-focus></textarea>
+            </div>
+        </div>
+        <div class="row customModal__footer">
+            <div class="customModal--button-container dialog-button-container text-center">
+                <button v-if="properties.readOnly === false"
+                        class="sp-button dialog-button"
+                        v-on:click.stop.prevent="setValueAndClose(properties)"
+                        title="OK">
+                    OK
+                </button>
+
+                <button class="sp-button dialog-button"
+                        title="Cancelar"
+                        v-on:click.stop.prevent="cleanAndClose(properties)">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+</script>
+<div id="loader-wrapper" class="showbox hidden">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+</div>
+<template id="searchWindowTemplate">
+    <div class="search-window">
+        <div class="search-result">
+            <div class="row">
+                <div class="search-header"></div>
+                <ul class="tabs-container nav nav-tabs" role="tablist">
+                    <li role="presentation" class="tabs-container-item-grid-density" id="dropdownMenu" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle"> <i class="fa fa-cog"></i> <span class="caret"></span> </a>
+                    </li>
+                    <li class="search-settings dropdown-menu" aria-labelledby="dropdownMenu">
+                        <span class="dropdown-title">DENSIDADE DE DADOS</span>
+                        <div class="radio-options">
+                            <label><input type="radio" class="search-settings-density" name="radioButtons" value="0" checked="checked"/>Normal</label>
+                            <label><input type="radio" class="search-settings-density" name="radioButtons" value="1"/>Media</label>
+                            <label><input type="radio" class="search-settings-density" name="radioButtons" value="2"/>Compacta</label>
+                        </div>
+                        <div class="row-by-page">
+                            <label>Filas por p&#225;gina</label> <input type="number" class="sp-button search-settings-page-rows" name="name" value="30"/>
+                        </div>
+                        <button class="sp-button search-settings-save">
+                            <i class="fa fa-floppy-o"></i>
+                            Salvar
+                        </button>
+                    </li>
+                    <li role="presentation" class="tabs-container-item search-result-tab active">
+                        <a href="#tabResult-0" aria-controls="tabResult" role="tab" data-toggle="tab">Resultado da Busca</a>
+                    </li>
+                    <li role="presentation" class="tabs-container-item search-fields-tab">
+                        <a href="#tabFields-0" aria-controls="tabFields" role="tab" data-toggle="tab">Campos a visualizar</a>
+                    </li>
+                    <li role="presentation" class="tabs-container-item search-advanced-tab">
+                        <a href="#tabAdvanced-0" aria-controls="tabAdvanced" role="tab" data-toggle="tab">Op&#231;&#245;es Avan&#231;adas</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="row tab-pane search-result-content active" id="tabResult-0">
+                    <div class="search-result-grid">
+                        <div class="grid-data"></div>
+                        <div class="footer">
+                            <div class="paginator">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside-menu-buttons">
+                        <div class="aside-menu-combo">
+                            <select class="searches-combo">
+                            </select>
+                        </div>
+                        <div class="aside-menu-buttons-checklist">
+                            <label class="aside-menu-buttons-check only-operative-check">
+                                <input type="checkbox"/>
+                                S&#243; registros Operacionais
+                            </label>
+
+                            <label class="aside-menu-buttons-check favorite-check">
+                                <input type="checkbox" />
+                                Favorite search
+                            </label>
+                        </div>
+
+                        <div class="aside-menu-buttons">
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button reverse search-window-select">
+                                    <i class="fa fa-list-ul"></i>
+                                    Sele&#231;&#227;o de Registros
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-excel">
+                                    <i class="fa fa-file-excel-o"></i>
+                                    Passar para Excel
+                                </button>
+                            </div>
+
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-save">
+                                    <i class="fa fa-floppy-o"></i>
+                                    Salvar
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-save-as">
+                                    <i class="fa fa-floppy-o"></i>
+                                    Salvar como...
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-delete">
+                                    <i class="fa fa-times-circle"></i>
+                                    Excluir
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-close">
+                                    <i class="fa fa-sign-out"></i>
+                                    Fechar
+                                </button>
+                            </div>
+
+                            <div class="search-validator">
+                                <span class="search-validator-title">Attention</span>
+                                <span class="search-validator-description">There was an error saving data.</span>
+                                <span class="search-validator-icon"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab-pane search-fields-selector-content" id="tabFields-0">
+                    <div class="search-tab-content-header"></div>
+                    <div class="search-fields-selector">
+                        <div class="tree-view">
+                        </div>
+                    </div>
+                    <div class="search-fields-conditions">
+                        <div class="display-fields-panel">
+                            <div class="fields-panel-header row">
+                                <div class="panel-header-title">Field Display</div>
+                                <div class="panel-header-legend">
+                                    <img src="/Prisma4/images/info.png" class="visible-lg"/>
+                                    <span>Mark fields with check to include nulls</span>
+                                </div>
+                            </div>
+                            <div class="display-fields-list">
+                            </div>
+                        </div>
+                        <div class="order-fields-panel">
+                            <div class="fields-panel-header row">
+                                <div class="panel-header-title">Crit&#233;rios de Ordena&#231;&#227;o</div>
+                            </div>
+                            <div class="order-fields-list">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside-menu-buttons">
+                        <div class="aside-menu-buttons-checklist">
+                            <label class="aside-menu-buttons-check show-advanced-fields-check">
+                                <input type="checkbox"/>
+                                Incluir campos avan&#231;ados
+                            </label>
+                            <label class="aside-menu-buttons-check show-state-fields-check">
+                                <input type="checkbox"/>
+                                Incluir campos da tabela de Estados
+                            </label>
+                        </div>
+                        <div class="aside-menu-buttons">
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-update-fields">
+                                    <i class="fa fa-search"></i>
+                                    Buscar
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-save-fields">
+                                    <i class="fa fa-floppy-o"></i>
+                                    Salvar
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-close">
+                                    <i class="fa fa-sign-out"></i>
+                                    Fechar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab-pane search-advanced-options-content" id="tabAdvanced-0">
+                    <div class="search-conditions-grid">
+                        <div class="grid-conditions"></div>
+                    </div>
+                    <div class="aside-menu-buttons">
+                        <div class="search-tab-content-header"></div>
+                        <div class="aside-menu-buttons-checklist">
+                            <label class="aside-menu-buttons-check show-advanced-fields-check">
+                                <input type="checkbox"/>
+                                Incluir campos avan&#231;ados
+                            </label>
+                            <label class="aside-menu-buttons-check show-state-fields-check">
+                                <input type="checkbox"/>
+                                Incluir campos da tabela de Estados
+                            </label>
+                        </div>
+                        <div class="aside-menu-buttons">
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-update-conditions">
+                                    <i class="fa fa-search"></i>
+                                    Buscar
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-save-conditions">
+                                    <i class="fa fa-floppy-o"></i>
+                                    Salvar
+                                </button>
+                            </div>
+                            <div class="aside-menu-buttons-item">
+                                <button type="button" class="sp-button search-window-close">
+                                    <i class="fa fa-sign-out"></i>
+                                    Fechar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-parameter-dialog form-container">
+            <div class="form-dialog form-modal">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="actions-container actions-container-navigation-enabled">
+                            <div class="actions-navigation">
+                                <div class="actions-navigation-back">
+                                    <i class="fa fa-close fa-lg"></i>
+                                </div>
+                                <div class="actions-navigation-current" title="Condi&#231;&#245;es da Busca">
+                                    Condi&#231;&#245;es da Busca
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row conditions-container">
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-3 col-md-3 col-md-offset-2">
+                        <button class="sp-button ok-button">OK</button>
+                    </div>
+                    <div class="col-lg-2 col-lg-offset-2 col-md-3 col-md-offset-2">
+                        <button class="sp-button cancel-button">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-summary">
+            <!--TODO: Resumen búsqueda-->
+        </div>
+    </div>  
+</template>
+
+<script type="text/x-template" id="grid-detail-modal-template">
+    <div class="grid-detail-wrapper force-close-element">
+        <form id="" class="form-modal" v-bind:class="{'form-modal-maximized': isMaximized}">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="actions-container actions-container-navigation-enabled">
+                        <div class="actions-navigation">
+                            <div class="actions-navigation-current  actions-navigation-current--full-width ">Editar {{ base0RowNum + 1 }}</div>
+                            <sp-toggle-maximizer class-prefix="actions-navigation" v-on:click="toggleMaximizedState" :is-maximized="isMaximized"></sp-toggle-maximizer>
+                            <button type="button" class="customModal__close" v-on:click="close" title="Fechar">
+                                <i class="fa fa-close fa-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs-container-wrapper">
+                    <ul id="formTabs" class="tabs-container nav nav-tabs" role="tablist">
+                        <li v-for="(tab, index) in tabs"
+                            class="tabs-container-item"
+                            v-bind:class="{ 'active': index === activeTab }">
+                            <a v-on:click="activeTab = index">{{ tab.text }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-submenu-container">
+                    <div class="tabs-submenu-container-item pull-right next-row-button" v-on:click="nextRow">
+                        Seguinte
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                    <div class="tabs-submenu-container-item pull-right prev-row-button" v-on:click="prevRow">
+                        <i class="fa fa-arrow-left"></i>
+                        Anterior
+                    </div>
+                    <div class="tabs-submenu-container-item pull-left add-row-button" v-if="canAddRow" v-on:click="addRow">
+                        <i class="fa fa-plus"></i>
+                        Inserir Linha
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-form ">
+                <div class="row main-container">
+                    <div class="tab-content">
+                        <div v-for="(tab, index) in tabs"
+                             class="tab-pane"
+                             v-bind:class="{ 'active': index === activeTab }">
+                            <div class="row" 
+                                 v-for="detail in tab.details" 
+                                 v-bind:key="detail.id">
+                                <div class="col-md-6 detail-label" v-bind:title="detail.text">{{ detail.text }}</div>
+                                <div v-if="!detail.isEditable" 
+                                        class="col-md-6 detail-formatter text-center"
+                                        v-bind:data-formatter="detail.id">
+                                </div>
+                                <button v-else 
+                                        class="col-md-6 detail-formatter editable"
+                                        v-bind:data-formatter="detail.id"
+                                        v-show="!detail.editing"
+                                        v-on:focus="focus(detail.id)"
+                                        v-on:keydown.enter.prevent="edit(detail.id)"
+                                        v-on:click.prevent="edit(detail.id)"></button>
+
+                                <div class="col-md-6 detail-editor"
+                                        v-bind:class="{ 'key' : detail.isKey }"
+                                        v-bind:data-editor="detail.id"
+                                        v-on:keydown.enter.prevent="editNext(detail, !$event.shiftKey)"
+                                        v-on:keyup.esc.prevent="cancelEdit($event)"
+                                        v-on:keydown.tab.prevent="editNext(detail, !$event.shiftKey)"
+                                        v-show="detail.isEditable && detail.editing"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</script>
+
+<script type="text/x-template" id="user-menu-template">
+    <li role="presentation" class="dropdown" id="userMenu">
+        <a class="dropdown-toggle navbar-menu-link" data-toggle="dropdown"
+           href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i v-if="!hasImage" class="fa fa-user navbar-menu-icon"></i>
+            <span v-if="!hasImage" class="caret"></span>
+            <div v-if="hasImage" class="navbar-menu--user-image-container">
+                <user-image imageContainerClass="navbar-menu--user-image"
+                            :user-image="userImage">
+                </user-image>
+                <span class="caret"></span>
+            </div>
+        </a>
+        <ul class="settings-panel dropdown-menu">
+            <li class="dropdown-title">
+                <div class="row">
+                    <user-image class="col-sm-4"
+                                :user-image="userImage"
+                                avatarClass="user-avatar"
+                                imageContainerClass="image-profile">
+                    </user-image>
+                    <div class="col-sm-8 user-description">
+                        <div class="user-description">
+                            <h3>{{ currentUserName }}</h3>
+                            <p>{{ currentCompany }}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><hr /></li>
+            <li>
+                <span class="dropdown-title">DENSIDADE DE DADOS</span>
+                <div class="radio-options">
+                    <label><input type="radio" v-model="currentDensity" value="0" v-on:change="updateDensity" />Normal</label>
+                    <label><input type="radio" v-model="currentDensity" value="1" v-on:change="updateDensity" />Compacta</label>
+                </div>
+            </li>
+            <li v-if="fullScreenAvailable">
+                <hr />
+                <div class="asideBox-section asideBox-section-as-table">
+                    <input type="checkbox" v-model="currentFullScreen" v-on:change="updateFullScreen" id="chkFullscreen" />
+                    <label for="chkFullscreen">Fullscreen</label>
+                </div>
+            </li>
+            <li><hr /></li>
+            <li v-if="currentCanChangePassword">
+                <a v-on:click="changePassword">
+                    <span class="fa fa-shield navbar-user-icon"></span>
+                    <span class="navbar-user-text">Alterar a senha</span>
+                </a>
+            </li>
+            <li>
+                <a v-on:click="logout('/Prisma4/AccountCustom/LogOut')">
+                    <span class="fa fa-sign-out navbar-user-icon"></span>
+                    <span class="navbar-user-text">Encerrar Sess&#227;o</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</script>
+<script type="text/x-template" id="admin-menu-template">
+    <li role="presentation" class="dropdown" id="adminMenu">
+        <a class="dropdown-toggle navbar-menu-link important" data-toggle="dropdown"
+           href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user-secret navbar-menu-icon"></i>
+            <span class="navbar-menu-text">ADMIN</span>
+            <span class="caret"></span>
+        </a>
+        <ul class="settings-panel dropdown-menu">
+            <li>
+                <a v-on:click="cancelSudo">
+                    <span class="fa fa-unlock-alt navbar-user-icon"></span>
+                    <span class="navbar-user-text">Encerrar Sess&#227;o admin</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</script>
+<script type="text/x-template" id="notification-template">
+    <div class="list-group-item" :class="typeClass">
+        <button v-if="!notification.messageShownDate" title="Descartado" type="button" class="btn btn-link pull-right" v-on:click.stop="dismiss"><span class="glyphicon glyphicon-remove"></span></button>
+        <h3 class="list-group-item-heading"><i :class="iconClass"></i> {{ notification.launchedProcessProgramName }} <small>{{ notification.launchedProcess }}</small></h3>
+        <p class="list-group-item-text" :title="notification.notes">{{ notification.notes }}</p>
+        <p class="list-group-item-text">Desde <b>{{ notification.launchedProcessDate }}</b> At&#233; <b>{{ notification.launchedProcessEndDate }}</b></p>
+    </div>
+</script>
+<script type="text/x-template" id="notifications-menu-template">
+    <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle navbar-menu-link" data-toggle="dropdown"
+           href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-envelope navbar-menu-icon"></i> <span class="caret"></span>
+            <span class="badge" :class="badgeClass" v-if="notifications.length > 0">{{ notifications.length }}</span>
+        </a>
+        <ul class="settings-panel dropdown-menu notifications-menu">
+            <li>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="dropdown-title">NOTIFICA&#199;&#213;ES</div>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button v-if="notifications.length > 0"
+                                title="Marcar como Lido"                                
+                                type="button"
+                                class="btn btn-default btn-sm"
+                                v-on:click.stop="dismiss()">
+                            <span class="fa fa-archive"></span> Marcar tudo como lido
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="list-group">
+                            <div v-if="notifications.length === 0" class="list-group-item">Nenhuma notifica&#231;&#227;o pendente</div>
+                            <notification v-if="notifications.length > 0"
+                                          :data="notification"
+                                          v-for="notification in notifications.slice(0,3)"
+                                          :key="notification.launchedProcessCounter"
+                                          v-on:dismiss="dismiss"></notification>
+                        </div>
+                    </div>
+                </div>
+                
+            </li>
+            <li v-if="notifications.length > 0" >
+                <a v-on:click="openModal">
+                    <span class="fa fa-list-alt navbar-user-icon"></span>
+                    <span class="navbar-user-text">Mostre mais</span>
+                </a>
+            </li>
+            <li v-if="notifications.length === 0">
+                <a v-on:click="openModal">
+                    <span class="fa fa-history navbar-user-icon"></span>
+                    <span class="navbar-user-text">Ver hist&#243;rico</span>
+                </a>
+            </li>
+        </ul>
+        <notifications-modal v-if="showModal"
+                             :notifications="notifications"
+                             :pending="pending"
+                             v-on:dismiss="dismiss"
+                             v-on:close="close">
+        </notifications-modal>
+    </li>
+</script>
+<script type="text/x-template" id="notifications-modal-template">
+    <div class="notifications-modal-wrapper force-close-element">
+        <form id="" class="form-modal">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="actions-container actions-container-navigation-enabled">
+                        <div class="actions-navigation">
+                            <div class="actions-navigation-current  actions-navigation-current--full-width ">Notifica&#231;&#245;es</div>
+                            <button type="button" class="customModal__close" v-on:click="close">
+                                <i class="fa fa-close fa-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs-container-wrapper">
+                    <ul id="formTabs" class="tabs-container nav nav-tabs" role="tablist">
+                        <li class="tabs-container-item" v-bind:class="{ 'active': showPending }">
+                            <a v-on:click="filterPending(true)">Pendentes</a>
+                        </li>
+                        <li class="tabs-container-item" v-bind:class="{ 'active': !showPending }">
+                            <a v-on:click="filterPending(false)">Hist&#243;rico</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs-submenu-container">
+                    <div v-if="showPending && filteredNotifications && filteredNotifications.length > 0" class="tabs-submenu-container-item pull-right next-row-button" v-on:click="dismiss()">
+                        Marcar tudo como lido
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-form">
+                <div class="row main-container">
+                    <div class="tab-content">
+                        <div class="tab-pane active">
+                            <div class="list-group col-md-12">
+                                <div v-if="filteredNotifications && filteredNotifications.length === 0" class="list-group-item">Nenhuma notifica&#231;&#227;o pendente</div>
+                                <notification v-if="filteredNotifications && filteredNotifications.length > 0"
+                                              :data="notification"
+                                              v-for="notification in filteredNotifications"
+                                              :key="notification.launchedProcessCounter"
+                                              v-on:dismiss="dismiss"></notification>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+<script type="text/x-template" id="browser-menu-template">
+    <li v-if="hasAlert" role="presentation" class="dropdown" id="browserMenu">
+        <a class="dropdown-toggle navbar-menu-link" data-toggle="dropdown"
+           href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-warning navbar-menu-icon warning"></i>
+            <span class="caret"></span>
+        </a>
+        <ul class="settings-panel dropdown-menu">
+            <li class="dropdown-title">
+                <div class="row">
+                    <span class="col-sm-2 fa fa-warning navbar-menu-icon warning"></span>
+                    <span class="dropdown-title">Browser Alert</span>
+                </div>
+            </li>
+            <li><hr /></li>
+            <li>
+                <div class="navbar-user-text">
+                    <span>The browser you are using is not supported. Use Chrome or Edge.</span>
+                </div>
+            </li>
+        </ul>
+    </li>
+</script>
+<script type="text/x-template" id="control-panel-template">
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="control-panel-table table table-condensed"
+                   v-if="rows.length > 0 && columns.length > 0">
+                <thead class="bg-primary">
+                    <tr v-if="hasBreakDownColumns">
+                        <template v-for="column in breakDownColumns">
+                            <th :colspan="column.colspan"
+                                class="text-center sp-column sp-column--box-shadow"
+                                v-if="column.visible">
+                                {{column.text}}
+                            </th>
+                        </template>
+                    </tr>
+
+                    <tr class="bg-primary">
+                        <th v-for="column in mainColumns"
+                            class="sp-column sp-column--box-shadow">
+                            {{column.text}}
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr v-for="(row, index) in groupedRows"
+                        class="sp-row"
+                        v-bind:class="{ 'sp-row sp-row--even': index % 2 === 0, 'sp-row sp-row--odd': index % 2 !== 0 }">
+                        <template v-for="cell in row">
+                            <th v-if="cell.header"
+                                :rowspan="cell.rowspan"
+                                class="sp-cell">
+                                {{cell.value}}
+                            </th>
+
+                            <td v-else-if="!cell.grouped"
+                                class="sp-cell">
+                                {{cell.value}}
+                            </td>
+                        </template>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</script>
+
+
+<script type="text/x-template" id="control-panel-calc-chart-configurator-template">
+    <div>
+        <div class="customModal__content">
+            <!-- General -->
+            <div class="row pt-2">
+                <div class="col"><h4>Geral</h4></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-hover table-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Título</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="customModal__row">
+                                <td>
+                                    <div class="sp-input-cluster-container-wrapper">
+                                        <div class="sp-input-cluster-section ">
+                                            <div class="sp-input-cluster-container-wrapper ">
+                                                <div class="sp-input-container">
+                                                    <input type="text"
+                                                           v-model="chartConfiguration.titles[0].text" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END General -->
+            <!-- Columns -->
+            <div class="row pt-2">
+                <div class="col"><h4>Columnas</h4></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-hover table-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Disponibles</th>
+                                <th scope="col" class="text-right">
+                                    <a>
+                                        <i class="fa fa-plus"
+                                           v-on:click="addAllColumns"></i>
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="column in availableColumns" :key="column.text" class="customModal__row">
+                                <td>{{column.text}}</td>
+                                <td class="text-right">
+                                    <a class="text-primary"
+                                       v-on:click="addColumn(column)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-6">
+                    <table class="table table-hover table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Seleccionadas</th>
+                                <th scope="col" class="text-right">
+                                    <a>
+                                        <i class="fa fa-trash"
+                                           v-on:click="removeAllColumns"></i>
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="selectedColumn in selectedColumns" :key="selectedColumn.text" class="customModal__row">
+                                <td>
+                                    <div class="sp-input-cluster-container-wrapper">
+                                        <div class="sp-input-cluster-section ">
+                                            <div class="sp-input-cluster-container-wrapper ">
+                                                <div class="sp-input-container">
+                                                    <input type="text"
+                                                           v-model="selectedColumn.displayValue" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <a class="text-danger"
+                                       v-on:click="removeColumn(selectedColumn)">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END Columns -->
+            <!-- Rows -->
+            <div class="row pt-2">
+                <div class="col"><h4>Filas</h4></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <table class="table table-hover table-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Disponibles</th>
+                                <th scope="col" class="text-right">
+                                    <a>
+                                        <i class="fa fa-plus"
+                                           v-on:click="addAllRows"></i>
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="row in availableRows" :key="row.displayValue" class="customModal__row">
+                                <td>{{row.text}}</td>
+                                <td class="text-right">
+                                    <a class="text-primary"
+                                       v-on:click="addRow(row)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-6">
+                    <table class="table table-hover table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Seleccionadas</th>
+                                <th scope="col" class="text-right">
+                                    <a>
+                                        <i class="fa fa-trash"
+                                           v-on:click="removeAllRows"></i>
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="selectedRow in selectedRows" :key="selectedRow.text" class="customModal__row">
+                                <td>
+                                    <div class="sp-input-cluster-container-wrapper">
+                                        <div class="sp-input-cluster-section ">
+                                            <div class="sp-input-cluster-container-wrapper ">
+                                                <div class="sp-input-container">
+                                                    <input type="text"
+                                                           v-model="selectedRow.displayValue" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <a class="text-danger"
+                                       v-on:click="removeRow(selectedRow)">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END Rows -->
+        </div>
+
+        <div class="row customModal__footer">
+            <div class="customModal--button-container dialog-button-container text-center">
+                <button v-if="properties.chartType === CHART_TYPES.PIE"
+                        v-bind:disabled="generatingChart"
+                        class="dialog-button"
+                        v-bind:class="{ disabled: generatingChart }"
+                        v-on:click.stop.prevent="launchChart"
+                        title="Configuración de un gráfico tipo tarta para los datos seleccionados en la tabla">
+                    Lançar gráfico em Pizza
+                </button>
+
+                <button v-if="properties.chartType === CHART_TYPES.SERIAL"
+                        v-bind:disabled="generatingChart"
+                        class="dialog-button"
+                        v-bind:class="{ disabled: generatingChart }"
+                        v-on:click.stop.prevent="launchChart"
+                        title="Configuración de un gráfico de barras para los datos seleccionados en la tabla">
+                    Lançar gráficos em Barras
+                </button>
+
+                <button v-bind:disabled="generatingChart"
+                        class="dialog-button"
+                        v-bind:class="{ disabled: generatingChart }"
+                        v-on:click.stop.prevent="cleanAndClose"
+                        title="Cancelar">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="grid-header-operations-template">
+    <ul class="operation-list">
+        <li v-for="operation in fixedOperations">
+             <grid-header-operation
+                :operation="operation"
+                :selectedRows="selectedRows"
+                :gridType="gridType">
+             </grid-header-operation>
+        </li>
+
+        <li v-for="operation in dynamicOperations">
+             <grid-header-operation
+                :operation="operation"
+                :selectedRows="selectedRows"
+                :gridType="gridType">
+             </grid-header-operation>
+        </li>
+    </ul>
+</script>
+<script type="text/x-template" id="grid-header-operation-template">
+    <div
+        v-if="showOperation"
+        class="grid-btn"
+        :class="isDisabledOperation"
+        v-on:click="operation.eventHandler">
+        <i :class="operation.icon"></i>
+        <div class="grid-btn-label">{{operation.label}}</div>
+        <div class="grid-sel-number" 
+            v-if="showSelectedRows">
+            ({{selectedRows}})
+        </div>
+    </div>
+</script>
+
+
+<script type="text/x-template" id="grid-header-options-template">
+    <div class="grid-header-group dropdown" v-if="readOnly">
+        
+        <div v-if="showActions" class="grid-btn">
+            <div class="grid-btn" v-on:click="expandAll">
+                <i class="fa fa-expand"></i>
+                <div class="grid-btn-label">Expandir todos</div>
+            </div>
+            <div class="grid-btn" v-on:click="collapseAll">
+                <i class="fa fa-compress"></i>
+                <div class="grid-btn-label">Recolher todos</div>
+            </div>
+        </div>
+
+        <div class="grid-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <i class="fa fa-th-list"></i>
+            <div class="grid-btn-label">
+                <span v-if="showActions" v-html="groupByColumn.config.text"></span>
+                <span v-else>Sem agrupar</span>
+                <span class="caret"></span>
+            </div>
+        </div>
+
+        <ul class="dropdown-menu" v-bind:style="styleObject">
+            <li v-for="option in allOptions" :key="option.name" :class="{'selected': groupByColumn === option}">
+                <grid-header-option :option="option"
+                                    v-on:group-by="groupBy">
+                </grid-header-option>
+            </li>
+        </ul>
+    </div>
+</script>
+<script type="text/x-template" id="grid-header-option-template">
+     <a v-on:click="groupBy()" v-html="option.text"></a>
+</script>
+<script type="text/x-template" id="grid-header-context-menu-template">
+    <div class="grid-header-options dropup">
+        <button
+            v-if="showGridHeaderContextMenu" 
+            class="btn btn-default dropdown-toggle" 
+            type="button" 
+            id="gridOptionsMenu" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="true"
+            v-on:click="openContextMenu">
+                <div class="grid-options-btn">
+                    <i class="fa fa-cog"></i>
+                </div>
+                
+                <span class="caret"></span>
+        </button>
+    </div>
+</script>
+<script type="text/x-template" id="grid-filter-operator-template">
+    <grid-filter-drop-down 
+        :values-source="filterOperators" 
+        :value="filterOperator" 
+        :add-empty-element="false" 
+        v-on:value-changed="operatorChanged">
+    </grid-filter-drop-down>
+</script>
+<script type="text/x-template" id="grid-filter-input-style-template">
+    <div class="sp-input-cluster-container-wrapper">
+        <div class="sp-input-cluster-section">
+            <div class="sp-input-cluster-container-wrapper">
+                <div class="sp-input-container">
+                    <slot></slot>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="grid-filter-input-template">
+    <grid-filter-input-style>
+        <input type="text"
+               v-model="value"
+               v-on:input="handleInput" />
+    </grid-filter-input-style>
+</script>
+<script type="text/x-template" id="grid-filter-select-template">
+    <grid-filter-input-style>
+        <grid-filter-drop-down :values-source="values"
+                               :value="value"
+                               :add-empty-element="true"
+                               v-on:value-changed="valueChanged">
+        </grid-filter-drop-down>
+    </grid-filter-input-style>
+</script>
+<script type="text/x-template" id="grid-filter-column-template">
+    <div class="grid-filter-form-input-container" v-if="showColumn">
+        <grid-filter-operator :column="column"
+                              :event-bus="eventBus"
+                              v-on:operator-changed="updateColumnConditionOperator"
+                              v-on:operator-initialized="initializeColumnConditionOperator">
+        </grid-filter-operator>
+        
+        <transition name="fade">
+            <component :is="filterValueType"
+                        :column="column"
+                        :event-bus="eventBus"
+                        :condition-operator="columnCondition.operator"
+                        v-on:value-changed="updateColumnConditionValue"
+                        v-on:value-initialized="updateColumnConditionValue"
+                        v-if="conditionNeedsValue">
+            </component>
+        </transition>
+    </div>
+</script>
+    <script type="text/x-template" id="grid-filter-drop-down-template">
+    <select v-bind:value="value" v-on:change="valueChanged">
+        <option v-for="item in values"
+                :value="item.key">
+            {{item.value}}
+        </option>
+    </select>
+</script>
+<script type="text/x-template" id="grid-filter-date-time-edit-template">
+    <div class="sp-input-cluster-container-wrapper">
+        <div class="sp-input-cluster-section">
+            <div ref="datePickerAInput" class="sp-input-cluster-container-wrapper">
+                <div class="sp-input-container">
+                    <input type="text">
+                </div>
+                
+                <div class="sp-input-button sp-calendar-button input-cluster-help input-group-addon sp-date-picker-button">
+                        <div ref="datePickerAButton"
+                            class="sp-input-cluster-help-button">
+                            <i class="fa fa-calendar" tabindex="-1"></i>
+                        </div>
+                </div>
+            </div>
+            
+            <div
+                v-show="isBetweenOperator" 
+                ref="datePickerBInput" 
+                class="sp-input-cluster-container-wrapper">
+                <div class="sp-input-container">
+                    <input type="text">
+                </div>
+                
+                <div class="sp-input-button sp-calendar-button input-cluster-help input-group-addon sp-date-picker-button">
+                        <div ref="datePickerBButton"
+                            class="sp-input-cluster-help-button">
+                            <i class="fa fa-calendar" tabindex="-1"></i>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="grid-filter-duration-text-box-template">
+    <grid-filter-input-style>
+        <input ref="grid-filter-duration-text-box"
+               type="text"
+               v-model="value"
+               v-on:input="handleInput"
+               v-on:keypress="handleKeyPress"
+               v-on:focusout="handleFocusOut"
+               v-on:focus="handleFocus" />
+    </grid-filter-input-style>
+</script>
+<script type="text/x-template" id="grid-filter-numeric-text-box-template">
+    <grid-filter-input-style>
+        <input ref="filterValueInput"
+               type="text"
+               v-model="value"
+               v-on:input="handleInput" />
+     </grid-filter-input-style>
+</script>
+<script type="text/x-template" id="grid-filter-panel">
+    <transition name="fade">
+        <div
+            id="grid-filter-panel-container"
+            class="grid-filter-panel"
+            v-on:apply-filters="applyFilters"
+            v-show="showGridFilter">
+            <div
+                class="grid-filter-cell grid-filter-refresh"
+                :style="{ width: checkboxSelectorColumn.width + 'px' }"
+                v-on:click="eraseFilters">
+                <span class="fa fa-eraser"></span>
+            </div>
+        
+            <div
+                v-for="inputColumn in inputColumns"
+                class="grid-filter-cell"
+                :key="inputColumn.id"
+                :style="{ width: inputColumn.width + 'px'}">
+        
+                <grid-filter-column
+                    :column="inputColumn"
+                    v-on:column-condition-changed="columnConditionChanged"
+                    :event-bus="eventBus">
+                </grid-filter-column>
+            </div>
+        </div>
+</transition>
+</script>
+
+<script type="text/x-template" id="camera-shower-template">
+    <div class="camera__capturer">
+        <div v-if="showCameras" ref="cameras" class="camera__capturer__cameras">
+            <div class="col-md-12 sp-input-cluster sp-input-container" v-if="severalCameras">
+                <select v-bind:disabled="cameraSelectorDisabled"
+                        v-model:value="selectedDeviceId"
+                        v-on:change="cameraChanged">
+                    <option v-for="item in cameras"
+                            :key="item.deviceId"
+                            :value="item.deviceId">
+                        {{item.label}}
+                    </option>
+                </select>
+            </div>
+            <canvas id="canvas" ref="canvas" class="imagePreview"></canvas>
+        </div>
+        <div v-if="showError" class="info-message text-center">
+            {{errorMessage | translate}}
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="code-scanner-template">
+    <camera-shower class="customModal__content customModal__content--no-footer"
+                   v-on:initialized="cameraInitialized"></camera-shower>
+</script>
+
+<script type="text/x-template" id="camera-captured-accept-reject-template">
+    <div class="buttonContainer">
+        <input type="button" value="OK" v-on:click="accept" />
+        <input type="button" value="Cancelar" v-on:click="reject" />
+    </div>
+</script>
+
+<script type="text/x-template" id="camera-image-capturer-template">
+    <div class="customModal__content customModal__content--no-footer">
+        <div class="camera__capturer-container" v-if="!isImageCaptured">
+            <camera-shower v-on:initialized="cameraInitialized"></camera-shower>
+            <div v-if="mediaAvailable" class="buttonContainer">
+                <button v-on:click="captureImage" class="btn btn-default btn-sm custom-input" title="Capture">
+                    <i class="fa fa-camera"></i>
+                    Capture
+                </button>
+            </div>
+        </div>
+
+        <div class="camera__image-captured-container" v-show="isImageCaptured">
+            <div class="camera__capturer">
+                <div class="camera__capturer__cameras">
+                    <canvas id="imagePreview" ref="imagePreview" class="imagePreview"
+                            v-bind:width="imageWidth"
+                            v-bind:height="imageHeight" />
+                </div>
+            </div>
+
+            <camera-captured-accept-reject v-on:accept="acceptImage"
+                                           v-on:reject="discardImage">
+            </camera-captured-accept-reject>
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="camera-video-capturer-time-elapsed-template">
+    <div class="recording-container">
+        <div class="recording-icon img-circle"></div>
+        <span class="recording-time">{{timeElapsed}}</span>
+    </div>
+</script>
+
+<script type="text/x-template" id="camera-video-capturer-buttons-template">
+    <div class="buttonContainer">
+        <button v-if="!isVideoBeingCaptured"
+                v-on:click="startCaptureVideo"
+                class="btn btn-default btn-sm custom-input"
+                title="Record">
+            <i class="fa fa-video-camera"></i>
+            Record
+        </button>
+        <camera-video-capturer-time-elapsed v-if="isVideoBeingCaptured"></camera-video-capturer-time-elapsed>
+        <button v-if="isVideoBeingCaptured"
+                v-on:click="stopCaptureVideo"
+                class="btn btn-default btn-sm custom-input"
+                title="Stop">
+            <i class="fa fa-stop"></i>
+            Stop
+        </button>
+    </div>
+</script>
+<script type="text/x-template" id="camera-video-capturer-template">
+    <div class="customModal__content customModal__content--no-footer">
+        <div class="camera__capturer-container" v-if="!isVideoCaptured">
+            <camera-shower v-bind:videoPurpose="true"
+                           v-bind:cameraSelectorDisabled="isVideoBeingCaptured"
+                           v-on:initialized="cameraInitialized">
+            </camera-shower>
+            <camera-video-capturer-buttons v-if="mediaAvailable"
+                                           v-bind:isVideoBeingCaptured="isVideoBeingCaptured"
+                                           v-on:startCaptureVideo="startCaptureVideo"
+                                           v-on:stopCaptureVideo="stopCaptureVideo">
+            </camera-video-capturer-buttons>
+        </div>
+        <div class="camera__video-captured-container" v-if="isVideoCaptured">
+            <div class="camera__capturer">
+                <div class="camera__capturer__cameras">
+                    <video class="videoPreview" controls="controls"
+                           v-bind:src="videoCapturedUrl"
+                           v-bind:style="{'max-width':videoWidth + 'px'}" />
+                </div>
+            </div>
+            <camera-captured-accept-reject v-on:accept="acceptVideoCaptured"
+                                           v-on:reject="discardVideoCaptured">
+            </camera-captured-accept-reject>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="documents-repository-structure-explorer-template">
+    <div class="sp-tree customModal__content customModal__content--no-footer">
+        <div v-if="rootFolder.Accesible">
+            <folder-repository-structure-explorer :eventBus="eventBus"
+                                                  :item="rootFolder"
+                                                  :allowSelectFolders="props.allowSelectFolders"
+                                                  :showFiles="props.showFiles">
+            </folder-repository-structure-explorer>
+        </div>
+        <div v-else>
+            <i class="sp-icon-warning" :title="rootFolder.RelativePath"></i>
+            Pasta n&#227;o encontrada
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="file-repository-structure-explorer-template">
+    <li v-on:click="click">
+        <svg viewBox="0 0 7 7" class="sp-tree-node-plus sp-tree-node-plus--hidden"></svg>
+        <span class="sp-tree-node-image sp-tree-node-image--bottom fa fa-file-o colored-icon"></span>
+        <span class="sp-tree-node-text">{{item.Name}}</span>
+    </li>
+</script>
+<script type="text/x-template" id="folder-repository-structure-explorer-template">
+    <li>
+        <svg viewBox="0 0 7 7" 
+                :class="classNameExpandItem"
+                v-on:click="toggle">
+            <rect class="sp-tree-node-plus-minus" style="fill: #000000; stroke: #000000;" y="3.1" width="7" height="0.8"></rect>
+            <rect style="fill: #000000; stroke: #000000;" x="3.1" width="0.8" height="7"></rect>
+        </svg>
+
+        <span class="sp-tree-node-image sp-tree-node-image--bottom colored-icon" :class="classFolderIcon"></span>
+        
+        <span class="sp-tree-node-text" v-on:click="click">{{ item.Name }}</span>
+
+        <transition name="fade">
+            <ul v-if="isOpened">
+                <folder-repository-structure-explorer v-for="childFolder in folders"
+                                                      :key="childFolder.name"
+                                                      :eventBus="eventBus"
+                                                      :item="childFolder"
+                                                      :allowSelectFolders="allowSelectFolders"
+                                                      :showFiles="showFiles">
+                </folder-repository-structure-explorer>
+                <file-repository-structure-explorer v-for="childFile in files"
+                                                    :key="childFile.name"
+                                                    :eventBus="eventBus"
+                                                    :item="childFile">
+                </file-repository-structure-explorer>
+            </ul>
+        </transition>
+    </li>
+</script>
+
+<script type="text/x-template" id="screen-designer-template">
+    <div class="screen-designer">
+        <screen-designer-tree v-if="!loading"
+                              v-bind:selectedItem="selectedItem"
+                              v-bind:form="form"
+                              v-bind:$v="$v.form"
+                              v-on:select="select">
+        </screen-designer-tree>
+
+        <div class="screen-designer-detail" v-if="!loading">
+            <transition mode="out-in">
+                <component v-if="selectedItem"
+                           v-bind:is="detailType"
+                           v-bind:key="selectedItem.hash"
+                           v-bind:item="selectedItem"
+                           v-bind:$v="selected$Item"
+                           v-bind:dataEntity="form.dataEntity"
+                           v-on:add="add"
+                           v-on:addWithoutSelecting="addWithoutSelecting"
+                           v-on:remove="remove">
+                </component>
+            </transition>
+        </div>
+    </div>
+</script><script type="text/x-template" id="screen-designer-tree-template">
+    <div class="screen-designer-tree"
+         v-if="form"
+         v-bind:class=[draggingClass]>
+        <screen-designer-tree-item class="screen-designer-tree-root"
+                                   v-bind:selectedItem="selectedItem"
+                                   v-bind:item="form"
+                                   v-bind:$v="$v">
+        </screen-designer-tree-item>
+
+        <transition name="list">
+            <screen-designer-tree-item v-if="form.documentManager"
+                                       v-bind:selectedItem="selectedItem"
+                                       v-bind:item="form.documentManager">
+            </screen-designer-tree-item>
+        </transition>
+
+        <transition name="list">
+            <screen-designer-tree-item v-if="form.textEditor"
+                                       v-bind:selectedItem="selectedItem"
+                                       v-bind:item="form.textEditor">
+            </screen-designer-tree-item>
+        </transition>
+
+        <draggable v-model="form.sections"
+                   v-bind:options="sectionsOptions">
+            <transition-group name="list">
+                <screen-designer-tree-item v-for="(section, index) in form.sections"
+                                           v-bind:item="section"
+                                           v-bind:$v="$v.sections.$each[index]"
+                                           v-bind:selectedItem="selectedItem"
+                                           v-bind:key="section.hash">
+                </screen-designer-tree-item>
+            </transition-group>
+        </draggable>
+
+        <screen-designer-tree-item v-if="form.clientScripts && form.clientScripts.items.length"
+                                   v-bind:selectedItem="selectedItem"
+                                   v-bind:item="form.clientScripts"
+                                   v-bind:$v="$v.clientScripts"
+                                   v-bind:key="form.clientScripts.hash">
+        </screen-designer-tree-item>
+
+        <screen-designer-tree-item v-if="form.comparators && form.comparators.items.length"
+                                   v-bind:selectedItem="selectedItem"
+                                   v-bind:item="form.comparators"
+                                   v-bind:$v="$v.comparators"
+                                   v-bind:key="form.comparators.hash">
+        </screen-designer-tree-item>
+
+        <screen-designer-tree-item v-if="form.queries && form.queries.items.length"
+                                   v-bind:selectedItem="selectedItem"
+                                   v-bind:item="form.queries"
+                                   v-bind:$v="$v.queries"
+                                   v-bind:key="form.queries.hash">
+        </screen-designer-tree-item>
+    </div>
+</script><script type="text/x-template" id="screen-designer-tree-item-template">
+    <div>
+        <div class="screen-designer-tree-item"
+             v-bind:class="[selectedClass, errorClass]"
+             v-on:click="select"
+             v-on:dragover="dragOver"
+             v-on:dragleave="dragLeave">
+            <i class="screen-designer-tree-item-toggle fa"
+               v-on:click.stop="toggle"
+               v-bind:class="[toggleClass]">
+            </i>
+            <i v-bind:class="[iconClass]"
+               v-bind:title="item.$type">
+            </i>
+            <span class="screen-designer-tree-item-title">{{id}}</span>
+        </div>
+
+        <draggable class="screen-designer-tree-items"
+                   v-if="hasItems"
+                   v-model="item.items"
+                   v-on:start="startDrag"
+                   v-bind:class="[selectedClass, errorClass]"
+                   v-on:end="endDrag"
+                   v-bind:move="drag"
+                   v-bind:options="{
+                        group: itemGroup,
+                        type: item.$type
+                   }">
+            <transition-group name="list"
+                              tag="div"
+                              v-bind:class="[emptyClass, expandedClass]">
+                <screen-designer-tree-item v-for="(child, index) in item.items"
+                                           v-bind:key="child.hash"
+                                           v-bind:selectedItem="selectedItem"
+                                           v-bind:item="child"
+                                           v-bind:group="itemGroup"
+                                           v-bind:$v="$v.items.$each[index]">
+                </screen-designer-tree-item>
+            </transition-group>
+        </draggable>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-form-template">
+    <div>
+        <h1><i class="fa fa-form"></i>Form</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-model="item.id"
+                                      v-bind:$v="$v.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Text"
+                                      v-model="item.text"
+                                      v-if="isDialogType">
+        </screen-designer-detail-input>
+        <screen-designer-detail-select label="Form type"
+                                       v-model="item.formType"
+                                       v-on:input="changeFormType"
+                                       v-bind:options="formTypes">
+        </screen-designer-detail-select>
+        <screen-designer-detail-input label="Entidade"
+                                      disabled="true"
+                                      prefixTranslation="E"
+                                      v-model="item.dataEntity"
+                                      v-bind:has-search="true"
+                                      v-bind:$v="$v.dataEntity"
+                                      v-on:search="searchDataEntity"
+                                      v-on:change="changeDataEntity">
+        </screen-designer-detail-input>
+        <screen-designer-detail-checkbox label="Has record state"
+                                         v-if="entityHasOperativeControl"
+                                         v-model="item.hasRecordState">
+        </screen-designer-detail-checkbox>
+
+        <screen-designer-detail-checkbox label="Document manager"
+                                         v-if="entityHasDocument"
+                                         v-bind:value="hasDocumentManager"
+                                         v-on:input="updateDocumentManager">
+        </screen-designer-detail-checkbox>
+
+        <screen-designer-detail-checkbox label="Text editor"
+                                         v-if="entityHasText"
+                                         v-bind:value="hasTextEditor"
+                                         v-on:input="updateTextEditor">
+        </screen-designer-detail-checkbox>
+
+        <screen-designer-detail-checkbox label="Toolbar"
+                                         v-if="isDialogType"
+                                         v-model="item.hasToolBar">
+        </screen-designer-detail-checkbox>
+
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Add section"
+                                           icon="section"
+                                           v-on:click="add('section')">
+            </screen-designer-detail-button>
+
+            <screen-designer-detail-button label="Add script"
+                                           icon="clientScript"
+                                           v-on:click="add('clientScript')">
+            </screen-designer-detail-button>
+
+            <screen-designer-detail-button label="Add comparator"
+                                           icon="comparator"
+                                           v-on:click="add('comparator')">
+            </screen-designer-detail-button>
+
+            <screen-designer-detail-button label="Add query"
+                                           icon="query"
+                                           v-on:click="add('query')">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-document-manager-template">
+    <div>
+        <h1><i class="fa fa-documentmanager"></i>Document manager</h1>
+
+        <screen-designer-detail-checkbox label="Enable printing"
+                                v-model="item.showPrintOption">
+        </screen-designer-detail-checkbox>
+
+        <screen-designer-detail-checkbox label="Visible"
+                                v-model="item.visible">
+        </screen-designer-detail-checkbox>
+        
+        <screen-designer-detail-checkbox label="Show index entry in display tree"
+                                v-model="item.showTreeViewIndexInput">
+        </screen-designer-detail-checkbox>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-text-editor-template">
+    <div>
+        <h1><i class="fa fa-texteditor"></i>Text editor</h1>
+        <screen-designer-detail-checkbox label="Visible"
+                                         v-model="item.visible">
+        </screen-designer-detail-checkbox>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-client-script-template">
+    <div>        
+        <h1><i class="fa fa-clientScript"></i>Script</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-button class="screen-designer-detail-group"
+                                       label="Excluir"
+                                       icon="remove"
+                                       v-on:click="remove">
+        </screen-designer-detail-button>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-comparator-template">
+    <div>
+        <h1><i class="fa fa-comparator"></i>Comparator</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+
+        <screen-designer-detail-input label="Control 1"
+                                      v-bind:$v="$v.control1"
+                                      v-model="item.control1">
+        </screen-designer-detail-input>
+
+        <screen-designer-detail-input label="Text 1"
+                                      v-bind:$v="$v.text1"
+                                      v-model="item.text1">
+        </screen-designer-detail-input>
+
+        <screen-designer-detail-select label="Operator" class="col-md-6"
+                                       v-model="item.operator"
+                                       v-bind:options="operators">
+        </screen-designer-detail-select>
+
+        <screen-designer-detail-select label="Type" class="col-md-6"
+                                       v-model="item.type"
+                                       v-bind:options="types">
+        </screen-designer-detail-select>
+
+        <screen-designer-detail-checkbox label="Fixed value comparator"
+                                         v-model="fixedValueComparator"
+                                         v-on:input="changeFixedValueComparator">
+        </screen-designer-detail-checkbox>
+
+        <screen-designer-detail-input label="Control 2"
+                                      v-if="!fixedValueComparator"
+                                      v-bind:$v="$v.control2"
+                                      v-model="item.control2">
+        </screen-designer-detail-input>
+
+        <screen-designer-detail-input label="Text 2"
+                                      v-if="!fixedValueComparator"
+                                      v-bind:$v="$v.text2"
+                                      v-model="item.text2">
+        </screen-designer-detail-input>
+
+        <screen-designer-detail-input label="Fixed value"
+                                      v-if="fixedValueComparator"
+                                      v-bind:$v="$v.fixedValue"
+                                      v-model="item.fixedValue">
+        </screen-designer-detail-input>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button class="screen-designer-detail-group"
+                                           label="Excluir"
+                                           icon="remove"
+                                           v-on:click="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-query-template">
+    <div>        
+        <h1><i class="fa fa-query"></i>Query</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Descrição"
+                                      v-bind:$v="$v.text"
+                                      v-model="item.text">
+        </screen-designer-detail-input>
+        <screen-designer-detail-button class="screen-designer-detail-group"
+                                       label="Excluir"
+                                       icon="remove"
+                                       v-on:click="remove">
+        </screen-designer-detail-button>
+    </div>
+</script><script type="text/x-template" id="screen-designer-detail-container-template">
+    <div>
+        <h1><i v-bind:class="componentData.iconClass"></i>{{componentData.title}}</h1>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button 
+                                           v-bind:label="componentData.buttonLabel"
+                                           v-bind:icon="componentData.buttonIcon"
+                                           v-on:click="add(componentData.buttonOnClickParameter)">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-section-template">
+    <div>
+        <h1><i class="fa fa-section"></i>Section</h1>
+
+        <screen-designer-detail-input label="Name"
+                                      v-model="item.id"
+                                      v-bind:$v="$v.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Descrição"
+                                      v-model="item.text">
+        </screen-designer-detail-input>
+        <screen-designer-detail-checkbox label="Visible"
+                                         v-model="item.visible">
+        </screen-designer-detail-checkbox>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Add section"
+                                           icon="section"
+                                           v-on:click="addSection()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add group"
+                                           icon="list"
+                                           v-on:click="addGroup()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add field"
+                                           icon="code"
+                                           v-on:click="addField()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add action"
+                                           icon="cog"
+                                           v-on:click="addAction()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add table"
+                                           icon="table"
+                                           v-on:click="addTable()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add record selector"
+                                           icon="search-plus"
+                                           v-on:click="addRecordSelector()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add report starter"
+                                           icon="list-alt"
+                                           v-on:click="addReportStarter()">
+            </screen-designer-detail-button>
+        </div>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                           icon="remove"
+                                           v-on:click="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="screen-designer-detail-subsection-template">
+    <div>
+        <h1><i class="fa fa-subsection"></i>Section</h1>
+
+        <screen-designer-detail-input label="Name"
+                                      v-model="item.id"
+                                      v-bind:$v="$v.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Descrição"
+                                      v-model="item.text">
+        </screen-designer-detail-input>
+        <screen-designer-detail-checkbox label="Visible"
+                                         v-model="item.visible">
+        </screen-designer-detail-checkbox>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Add group"
+                                           icon="list"
+                                           v-on:click="addGroup()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add field"
+                                           icon="code"
+                                           v-on:click="addField()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add action"
+                                           icon="cog"
+                                           v-on:click="addAction()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add table"
+                                           icon="table"
+                                           v-on:click="addTable()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add record selector"
+                                           icon="search-plus"
+                                           v-on:click="addRecordSelector()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add report starter"
+                                           icon="list-alt"
+                                           v-on:click="addReportStarter()">
+            </screen-designer-detail-button>
+        </div>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                           icon="remove"
+                                           v-on:click="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-group-template">
+    <div>
+        <h1><i class="fa fa-group"></i>Group</h1>
+        <screen-designer-detail-input label="Name"
+                             v-bind:$v="$v.id"
+                             v-model="item.id">
+        </screen-designer-detail-input>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Add field"
+                                           v-on:click="addField()"
+                                           icon="code">
+            </screen-designer-detail-button>
+
+            <screen-designer-detail-button label="Add action"
+                                           v-on:click="addAction()"
+                                           icon="cog">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add record selector"
+                                           icon="search-plus"
+                                           v-on:click="addRecordSelector()">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add report starter"
+                                           icon="list-alt"
+                                           v-on:click="addReportStarter()">
+            </screen-designer-detail-button>
+        </div>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                  v-on:click="remove"
+                                  icon="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-field-template">
+    <div>
+        <h1><i class="fa fa-field"></i>Field</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Descrição"
+                                      v-model="item.text">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Default value"
+                                      v-model="item.defaultValue">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="DataField"
+                                      disabled="true"
+                                      prefixTranslation="F"
+                                      v-model="item.dataField"
+                                      v-bind:has-search="true"
+                                      v-bind:has-clean="true"
+                                      v-bind:$v="$v.dataField"
+                                      v-on:search="searchDataField"
+                                      v-on:clean="clean">
+        </screen-designer-detail-input>
+        <screen-designer-detail-select label="DataType"
+                                       v-model="item.dataType"
+                                       v-bind:$v="$v.dataType"
+                                       v-bind:options="dataTypes">
+        </screen-designer-detail-select>
+        <screen-designer-detail-select label="Status"
+                                       v-model="item.state"
+                                       v-bind:options="fieldStatus">
+        </screen-designer-detail-select>
+        <screen-designer-detail-input label="DataValues"
+                                      v-bind:$v="$v.dataValues"
+                                      v-model="item.dataValues">
+        </screen-designer-detail-input>
+        <screen-designer-detail-checkbox label="Show as list"
+                                         v-model="item.showList">
+        </screen-designer-detail-checkbox>
+        <screen-designer-detail-select label="É Obrigatório"
+                                       v-model="item.isRequired"
+                                       v-bind:options="booleanOptions">
+        </screen-designer-detail-select>
+        <screen-designer-detail-select label="Dialog Button"
+                                       v-model="item.isHasTextDialog"
+                                       v-bind:options="booleanOptions">
+        </screen-designer-detail-select>
+        <screen-designer-detail-select label="Search Button"
+                                       v-model="item.isHasSearch"
+                                       v-bind:options="booleanOptions">
+        </screen-designer-detail-select>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Add action"
+                                           icon="action"
+                                           v-on:click="addAction()">
+            </screen-designer-detail-button>
+        </div>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                           icon="remove"
+                                           v-on:click="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-action-template">
+    <div>
+        <h1><i class="fa fa-action"></i>Action</h1>
+
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Text"
+                                      v-model="item.text">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Descrição"
+                                      v-model="item.description">
+        </screen-designer-detail-input>
+        <screen-designer-detail-select label="Action Type"
+                                       v-model="item.type"
+                                       v-bind:$v="$v.type"
+                                       v-bind:options="actionTypes"
+                                       v-on:input="actionTypeChanged">
+        </screen-designer-detail-select>
+        <screen-designer-detail-select label="Image to show"
+                                       v-model="item.image"
+                                       v-bind:$v="$v.image"
+                                       v-bind:options="actionImages">
+        </screen-designer-detail-select>
+        <screen-designer-detail-checkbox label="Enabled"
+                                         v-model="item.enabled">
+        </screen-designer-detail-checkbox>
+        
+        <transition name="fade">
+            <screen-designer-detail-input label="CustomRelatedControl"
+                                          v-model="item.customRelatedControl"
+                                          v-bind:$v="$v.customRelatedControl"
+                                          v-if="actionTypeMustUseCustomRelatedControl">
+            </screen-designer-detail-input>
+        </transition>
+
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                           v-on:click="remove"
+                                           icon="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-table-template">
+    <div>
+        <h1><i class="fa fa-table"></i>Table</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+        <screen-designer-detail-select label="Table type"
+                                       v-model="item.type"
+                                       v-bind:options="tableTypes">
+        </screen-designer-detail-select>
+        <screen-designer-detail-input label="DataTable"
+                                      disabled="true"
+                                      prefixTranslation="T"
+                                      v-bind:has-search="true"
+                                      v-bind:has-clean="true"
+                                      v-bind:$v="$v.dataTable"
+                                      v-on:search="searchDataTable"
+                                      v-on:clean="clean"
+                                      v-model="item.dataTable">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Altura"
+                                      type="number"
+                                      v-bind:$v="$v.height"
+                                      v-model="item.height">
+        </screen-designer-detail-input>
+        <screen-designer-detail-checkbox label="Is dynamic"
+                                         v-model="item.isDynamic">
+        </screen-designer-detail-checkbox>
+        <screen-designer-detail-checkbox label="It's not updated after saving"
+                                         v-model="item.cannotUpdateSaved">
+        </screen-designer-detail-checkbox>
+        <screen-designer-detail-checkbox label="It's not deleted after saving"
+                                         v-model="item.cannotDeleteSaved">
+        </screen-designer-detail-checkbox>
+        <screen-designer-detail-checkbox label="Edit on modal Added rows"
+                                         v-model="item.editOnModalAddedRows">
+        </screen-designer-detail-checkbox>
+        <screen-designer-detail-checkbox label="Show row count in tab"
+                                         v-model="item.rowCountInTab">
+        </screen-designer-detail-checkbox>
+
+        <div v-if="hasOrderBy" class="table-order-container col-md-12">
+            <div class="table-order-container__title">
+                <label>Critério de Ordenação</label>
+            </div>
+            <div class="table-order-container__items">
+                <screen-designer-detail-table-order-by v-for="itemOrder in item.orderByItems"
+                                                       v-bind:key="itemOrder.id"
+                                                       v-bind:item="itemOrder"
+                                                       v-on:remove="removeOrderItem">
+                </screen-designer-detail-table-order-by>
+            </div>
+        </div>
+
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Add field"
+                                           v-on:click="addField"
+                                           icon="code">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add action"
+                                           v-on:click="addAction"
+                                           icon="cog">
+            </screen-designer-detail-button>
+            <screen-designer-detail-button label="Add order by field"
+                                           v-if="hasTable"
+                                           v-on:click="addOrderByItem"
+                                           icon="sort">
+            </screen-designer-detail-button>
+        </div>
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                           v-on:click="remove"
+                                           icon="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-table-order-by-template">
+    <div class="table-order-item">
+        <div class="col-md-6">
+            <screen-designer-detail-input disabled="true"
+                                          v-model="item.columnName"
+                                          prefixTranslation="F">
+            </screen-designer-detail-input>
+        </div>
+
+        <div class="sp-input-container checkbox">
+            <label class="checkbox-label" title="Descending">
+                <input type="checkbox" v-model="item.descending" />
+                <span>Descending</span>
+            </label>
+        </div>
+
+        <a v-on:click.stop="remove" title="Excluir">
+            <i class="fa fa-remove"></i>
+        </a>
+    </div>
+</script><script type="text/x-template" id="screen-designer-detail-input-template">
+    <div class="col-md-12 sp-input-cluster input-group">
+        <div v-if="showLabel" class="sp-input-cluster-label-container">
+            <div class="input-cluster-title">{{label}}</div>
+        </div>
+
+        <div class="sp-input-cluster-container-wrapper">
+            <div class="sp-input-cluster-section ">
+                <div class="sp-input-cluster-container-wrapper ">
+                    <div class="sp-required-indicator">
+                        <i class="sp-icon-alert"
+                           v-bind:class="[iconClass]"
+                           v-bind:title="errorMessage | translate">
+                        </i>
+                    </div>
+                    <div class="sp-input-container">
+                        <input type="text"
+                               v-bind:value="valueTranslated"
+                               v-on:blur="blur($event.target.value)"/>
+                    </div>
+                    <div v-if="hasSearch" class="input-cluster-help sp-input-button">
+                        <div class="sp-input-cluster-help-button " tabindex="-1" data-icon-image="Search" v-on:click="search">
+                            <div class="button-type-icon standard-button-type-icon button-image-icon search-button-image-icon"></div>
+                        </div>
+                    </div>
+                    <div v-if="hasClean" class="input-cluster-help sp-input-button">
+                        <div class="sp-input-cluster-help-button" tabindex="-1" data-icon-image="trash-o" v-on:click="clean">                            
+                            <div class="fa fa-eraser"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script><script type="text/x-template" id="screen-designer-detail-select-template">
+    <div class="col-md-12 sp-input-cluster input-group ">
+        <div class="sp-input-cluster-label-container" v-if="showLabel">
+            <div class="input-cluster-title">{{label}}</div>
+        </div>
+
+        <div class="sp-input-cluster-container-wrapper">
+            <div class="sp-input-cluster-section">
+                <div class="sp-input-cluster-container-wrapper">
+                    <div class="sp-required-indicator">
+                        <i class="sp-icon-alert"
+                           v-bind:class="[iconClass]"
+                           v-bind:title="errorMessage | translate"></i>
+                    </div>
+                    <div class="sp-input-container" v-if="hasOptions">
+                        <select v-bind:value="value"
+                                v-on:change="updateValue($event.target.value)">
+                            <option v-for="option in options"
+                                    v-bind:key="option.key"
+                                    v-bind:value="option.key">
+                                {{option.value}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script><script type="text/x-template" id="screen-designer-detail-checkbox-template">
+    <div class="col-md-6 sp-input-cluster ">
+        <div class="sp-input-cluster-container-wrapper ">
+            <div class="sp-required-indicator">
+                <i class="sp-icon-alert"></i>
+            </div>
+            <div class="sp-input-container">
+                <div class="sp-input-cluster-container-wrapper">
+                    <div class="sp-input-container checkbox">
+                        <label class="checkbox-label" v-bind:title="label">
+                            <input type="checkbox"
+                                   v-bind:checked="value"
+                                   v-on:change="updateValue($event.target.checked)"/>
+                            <span>{{label}}</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</script><script type="text/x-template" id="screen-designer-detail-button-template">
+    <div class="col-md-3">
+        <div class="sp-input-cluster-container-wrapper ">
+            <div class="sp-input-container">
+                <button class="sp-button left-items"
+                        type="button" 
+                        v-on:click="click"
+                        v-bind:class="[buttonClass]"
+                        v-bind:title="label">
+                    <i v-if="icon" v-bind:class="[iconClass]"></i>{{label}}</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-record-selector-template">
+    <div>
+        <h1><i class="fa fa-search-plus"></i>Record Selector</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+
+        <screen-designer-detail-select label="Selection type"
+                                       v-model="item.selectionType"
+                                       v-bind:$v="$v.selectionType"
+                                       v-bind:options="selectionTypes">
+        </screen-designer-detail-select>
+        <screen-designer-detail-input label="Text"
+                                      v-model="item.text"
+                                      v-bind:$v="$v.text">
+        </screen-designer-detail-input>
+        <screen-designer-detail-select label="Display mode"
+                                       v-model="item.displayMode"
+                                       v-bind:$v="$v.displayMode"
+                                       v-bind:options="displayModes">
+        </screen-designer-detail-select>
+        <screen-designer-detail-input label="Searchs"
+                                      v-model="item.searchIds"
+                                      v-bind:$v="$v.searchId">
+        </screen-designer-detail-input>
+        <screen-designer-detail-input label="Table Ids"
+                                      v-model="item.tableIds"
+                                      v-bind:$v="$v.tableIds">
+        </screen-designer-detail-input>
+
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                           icon="remove"
+                                           v-on:click="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="screen-designer-detail-report-starter-template">
+    <div>
+        <h1><i class="fa fa-search-plus"></i>Report Starter</h1>
+        <screen-designer-detail-input label="Name"
+                                      v-bind:$v="$v.id"
+                                      v-model="item.id">
+        </screen-designer-detail-input>
+
+        <screen-designer-detail-checkbox label="Save Enabled"
+                                         v-model="item.saveEnabled">
+        </screen-designer-detail-checkbox>
+
+        <div class="screen-designer-detail-group">
+            <screen-designer-detail-button label="Excluir"
+                                           icon="remove"
+                                           v-on:click="remove">
+            </screen-designer-detail-button>
+        </div>
+    </div>
+</script>
+
+    <script src="/Prisma4/bundles/libs?v=lO6p9ypyRRysemwf9iAKYncbZnX5gceuVt9xWj18N4A1"></script>
+
+    <script src="/Prisma4/bundles/jquery?v=liX0TSOdRiWrrlYMDowYUOMBIStR3kaxbN3VH-TcFa01"></script>
+
+    <script src="/Prisma4/bundles/bootstrap?v=BZfjkVb1B_ksF_KgjWpzgJEYDNodgiz_OJuv0XEbTAc1"></script>
+
+    <script src="/Prisma4/bundles/sisteplant-globals?v=atP7hoPuYD25S5YbW1mq2lFla103clRfDhqmcaCytAA1"></script>
+
+    <script src="/Prisma4/bundles/sisteplant?v=M9XURBIkCvWLS6sCHulEOAObgE-aUf9eqr1eVfzd76k1"></script>
+
+    <script src="/Prisma4/signalr/hubs"></script>
+    <script src="/Prisma4/bundles/notifications?v=AhsHv7PsdCMt2UqbvawGkhdV7sWcH0FtcINdYVhSwB01"></script>
+
+    <script src="/Prisma4/bundles/screen-designer?v=Tb-N1XLRujMwy2AhtKiNrhjLjsacuciLasPAw8JEWRQ1"></script>
+
+    <script type="text/javascript" src="/Prisma4/ServerScripts/AppGroups"></script>
+    <script src="/Prisma4/bundles/sisteplant-controls?v=plzcjWUVVJCukqdsCl3z3zs23NmDP3XXUmuJ2IObH741"></script>
+
+    <script src="/Prisma4/bundles/app-globals?v=LG_zYirKgdTWP_V2biR4a5rwcqOMEPebtskbW3ykp0Y1"></script>
+
+
+    <script src="/Prisma4/bundles/dashboard?v=-GoEHwks4muRQGGKyy6GH8TlgQB1sPA8YakoMdJZx6A1"></script>
+
+
+    <script type="text/javascript">
+    $(document)
+        .ready(function () {
+
+            var baseUrl = 'https://www.telefonica-prismaflm.com.br/Prisma4/';
+            var appName = 'Prisma4';
+            window.addToHomeScreenManager.setUpAddHomeScreen(baseUrl, appName);
+
+            if (!window.karma && !window.jasmine) {
+                $(window).on('unload', function() {
+                    scr.unLoad();
+                });
+            }
+            gm.hourglass(true);
+            var changingAppUser = '';
+            scr.startInitializeScreensContainer($('.wrapper-content'), changingAppUser === 'true');
+
+cachedParams[1] = '1';cachedParams[2] = '';cachedParams[3] = '';cachedParams[4] = '';cachedParams[5] = '0';cachedParams[6] = '/Prisma4/StaticPages/Files/';cachedParams[7] = '1';cachedParams[8] = '1';cachedParams[9] = '11';cachedParams[11] = '1';cachedParams[12] = '1';cachedParams[13] = '2';cachedParams[14] = '1';cachedParams[15] = '45';cachedParams[16] = '1';cachedParams[17] = '2';cachedParams[18] = '11111';cachedParams[19] = '1';cachedParams[20] = '00';cachedParams[21] = 'infra@aditiva-sistemas.com.br';cachedParams[22] = '5';cachedParams[23] = '30';cachedParams[92] = 'txt, doc, docx, pdf, xls, xlsx, ppt, jpeg, png, jpg, gif';cachedParams[100] = '25';cachedParams[101] = '1';cachedParams[102] = '00';cachedParams[103] = '1010';cachedParams[104] = '';cachedParams[105] = '1';cachedParams[106] = '0';cachedParams[107] = '0';cachedParams[108] = '1';cachedParams[109] = '000000';cachedParams[110] = '1';cachedParams[111] = '1';cachedParams[112] = '1';cachedParams[113] = '';cachedParams[114] = '1';cachedParams[115] = '2';cachedParams[116] = '1';cachedParams[117] = '0';cachedParams[118] = '1';cachedParams[119] = '1';cachedParams[120] = '1';cachedParams[121] = '1';cachedParams[122] = '0';cachedParams[123] = '0';cachedParams[124] = '0';cachedParams[125] = '1';cachedParams[126] = '1';cachedParams[127] = '1';cachedParams[128] = '0';cachedParams[129] = '1';cachedParams[130] = '0';cachedParams[131] = '45';cachedParams[132] = '10';cachedParams[133] = '90';cachedParams[134] = '90';cachedParams[200] = '0';cachedParams[201] = '1';cachedParams[202] = '0';cachedParams[203] = '11:55';cachedParams[204] = '2';cachedParams[205] = '0';cachedParams[206] = '0';cachedParams[207] = '110000';cachedParams[208] = '1';cachedParams[209] = '00';cachedParams[210] = '0000';cachedParams[211] = '0';cachedParams[300] = '0';cachedParams[301] = '3';cachedParams[302] = '1111';cachedParams[303] = '0';cachedParams[304] = '1';cachedParams[305] = '0';cachedParams[306] = '101';cachedParams[307] = '0';cachedParams[308] = '1';cachedParams[309] = '1';cachedParams[310] = '1';cachedParams[311] = '1';cachedParams[312] = '0';cachedParams[313] = '1';cachedParams[314] = '0000000';cachedParams[315] = '';cachedParams[316] = '';cachedParams[401] = '1';cachedParams[402] = '1';cachedParams[403] = '1';cachedParams[404] = '4';cachedParams[405] = '';cachedParams[406] = '0';cachedParams[407] = '0';cachedParams[408] = '0';cachedParams[409] = '0';cachedParams[410] = '1';cachedParams[411] = '00000';cachedParams[412] = '0';cachedParams[413] = '0';cachedParams[414] = '0';cachedParams[415] = '0';cachedParams[416] = '0';cachedParams[417] = '0';cachedParams[418] = '00';cachedParams[419] = '0';cachedParams[500] = '00';cachedParams[501] = '120';cachedParams[502] = '1';cachedParams[503] = '1';cachedParams[504] = '0';cachedParams[505] = '1';cachedParams[506] = '1';cachedParams[507] = '0';cachedParams[508] = '0';cachedParams[509] = '0';cachedParams[510] = '0';cachedParams[511] = '0';cachedParams[512] = '0';cachedParams[513] = '0';cachedParams[600] = '1';cachedParams[601] = '1';cachedParams[602] = '1';cachedParams[603] = '1';cachedParams[604] = '0';cachedParams[605] = '0';cachedParams[606] = '0';cachedParams[607] = '0';cachedParams[1000] = '10,11,17,40,237';cachedParams[1001] = '80,85,87,119,257,610,611,617';cachedParams[1002] = '211';cachedParams[1003] = '211';cachedParams[1004] = '301';cachedParams[1005] = '17,20,170,180,190';cachedParams[1006] = '04,09,17,19,20';cachedParams[1007] = '236,237';cachedParams[1008] = '87,93';cachedParams[1009] = '87,91,92';cachedParams[1010] = '157,250';cachedParams[1011] = '7';cachedParams[1012] = '87,120';cachedParams[1013] = '120,87,695';cachedParams[1014] = '617,620,618,619,622';cachedParams[1015] = '08000-80-3434/Opção 1';cachedParams[1016] = '87,120,193,183,173';cachedParams[1017] = '710,717,740';cachedParams[1018] = '717,720,730';cachedParams[1019] = '13,17,20';cachedParams[2000] = 'www.telefonica-prismaflm.com.br/UploadFile/';cachedParams[2001] = '1.10.001';cachedParams[2002] = '1.10.001';cachedParams[2003] = '2501';cachedParams[3000] = 'https://app.powerbi.com/view?r=eyJrIjoiOTIxZmNjN2ItYzc2Mi00ZWRhLWEzN2UtY2QxN2ViNDQ4MTFlIiwidCI6ImNiOTY3MWFiLTJkY2UtNGI2YS04NWQ2LTBjYzI2NzQyZWY1YSJ9';        });
+    </script>
+
+    <script type="text/javascript">
+        MenuService.initialize();
+    </script>
+
+    <script type="text/javascript">
+    window.applicationBaseUrl = "/Prisma4/";
+    </script>
+
+</body>
+</html>
